@@ -1,0 +1,14 @@
+@media only screen and (max-device-width: 1000px) {
+  .card-grid {
+    margin: 2px;
+    grid-template-columns: repeat(3, 32%);
+    grid-gap: 2px;
+  }
+  .card-preview {
+    height: 10em;
+  }
+  .modal-footer {
+    margin-left: 250px;
+  }
+}
+

@@ -1,0 +1,6 @@
+# dependencies
+/node_modules
+/assets
+/build
+/src/store/config.js
+.idea
