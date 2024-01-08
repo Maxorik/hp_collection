@@ -1,5 +1,29 @@
-body {
+@font-face {
+  font-family: "HP2";
+  font-style: normal;
+  font-weight: 400;
+  src: local("HP2"), url(./HP2.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Bloggersanslight";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Bloggersanslight"), url(./Bloggersanslight.woff) format('woff');
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bloggersanslight";
+  font-size: 18px;
+  color: #2e2828cf;
+}
+
+body {
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,34 +40,48 @@ code {
 a {
   outline: none;
   text-decoration: none;
+  line-height: 15px;
+  color: rgba(14, 10, 255, 0.6);
 }
 
 .button {
-  min-width: 100px;
-  width: 99.5%;
-  height: 22px;
+  height: 40px;
   text-align: center;
-  color: #fff;
+  color: rgb(221, 211, 238) !important;
   border-radius: 4px;
-  padding: 2px;
+  padding: 6px 2px;
   cursor: pointer;
+  background-color: #51497c !important;
+  white-space: nowrap;
+  font-family: "Bloggersanslight" !important;
+  font-size: 18px !important;
 }
 
 .button-check {
-  background-color: #51497c;
+  min-width: 200px;
+  width: 99.5%;
+  margin-top: 16px;
 }
+
 .button-check:hover {
   background-color: #3a345b;
 }
 
+.card-preview-header {
+  min-width: 200px;
+  width: 99.5%;
+  height: 6px;
+  background-color: #51497c;
+}
+
 .pretty-text {
-  color: rgb(252, 183, 29);
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-family: "VT323", monospace;
+  color: #efd994;
+  text-shadow: -1px 0 #4b1b00, 0 1px #4b1b00, 1px 0 #4b1b00, 0 -1px #4b1b00;
+  font-family: "HP";
 }
 
 .card-grid {
-  margin: 10px;
+  margin-left: 1px;
   display: grid;
   grid-template-columns: repeat(8, 12%);
   grid-gap: 10px;
@@ -52,7 +90,8 @@ a {
 .card-preview {
   height: 270px;
   padding: 2px;
-  border: 1px solid #51497c;
+  border: 2px solid #51497c;
+  border-top: 6px solid #51497c;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -70,7 +109,6 @@ a {
 
 .card-preview-image-container {
   height: 85%;
-  margin-bottom: 10px;
 }
 
 .card-preview-image {
@@ -137,7 +175,6 @@ a {
   background-color: #af7306;
   border: 2px solid #fdcc55;
   color: #efd994;
-  font-size: 20px;
   line-height: 28px;
   padding: 2px 4px;
   border-radius: 2px;
@@ -145,11 +182,11 @@ a {
   position: absolute;
   z-index: 4;
   text-shadow: -1px 0 #4b1b00, 0 1px #4b1b00, 1px 0 #4b1b00, 0 -1px #4b1b00;
-  font-family: "VT323", monospace;
-  top: 60.5%;
-  left: 50%;
-  margin-left: -105.5px;
-  font-weight: bold;
+  top: 59%;
+  left: 52%;
+  margin-left: -107px;
+  font-family: "HP2";
+  font-size: 32px;
 }
 
 .modal-card-info {
@@ -159,12 +196,56 @@ a {
   justify-content: space-between;
   left: 50%;
   margin: 65px auto 0 -95px;
-  width: 190px;
-  color: #51497c;
+  width: 210px;
+  color: #af7306;
   font-weight: bold;
   font-family: "VT323", monospace;
+  line-height: 36px;
 }
 
 .modal-footer {
-  margin: 185px 0 0 275px;
+  margin: 185px 0 0 120px;
+  display: flex;
+}
+
+.checked-title {
+  color: rgba(20, 58, 0, 0.65);
+}
+
+.unchecked-title {
+  color: rgba(241, 0, 0, 0.53);
+}
+
+.mr-8 {
+  margin-right: 8px !important;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid #fdcc55;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.collection-body {
+  margin-top: 84px;
+}
+
+.header-text {
+  margin: 10px;
+  font-size: 22px;
+  font-family: "HP2";
+}
+
+.collection-info-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.header-logo-title-img {
+  width: 390px;
+  display: block;
 }

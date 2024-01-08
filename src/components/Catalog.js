@@ -17,35 +17,38 @@ const Catalog = observer(() => {
     collection.getCatalog();
   }, []);
 
-  function checkItem(event) {
-    collection.setCheck(event)
+  function checkItem(id, state) {
+    collection.setCheck(id, state)
   }
 
   return (
-    <div className="card-grid">
-      { collection.collectionList.map((item) => {
-        return <div
-            className={ `card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}` }
-            key={ item.code }
-            onClick={ () => showModal(true, item) }
-        >
-          <div className='card-preview-image-container'>
-            <img alt={ item.name } className='card-preview-image' src={ `/catalog_images/${[item.code]}.png` }/>
-          </div>
-          { item.checked === 'false' && <div
-              className='button button-check pretty-text'
-              id={ item.code }
-              onClick={ checkItem }>
-            есть!</div> }
-        </div>
-      } ) }
+      <div className='collection-body'>
+        <div className="card-grid">
+          { collection.collectionList.map((item) => {
+            return <div
+                className={ `card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}` }
+                key={ item.code }
+                onClick={ (e) => { !e.target.classList.contains('button') && showModal(true, item) } }
+            >
+              <div className='card-preview-image-container'>
+                <img alt={ item.name } className='card-preview-image' src={ `/catalog_images/${[item.code]}.png` }/>
+              </div>
+              { item.checked === 'false' && <div
+                  className='button button-check'
+                  id={ item.code }
+                  onClick={ () => checkItem(item.code, true) }>
+                В коллекцию</div> }
+            </div>
+          } ) }
 
-      { showCard === true && <Card
-          modal = { showCard }
-          selectedCard = { selectedCard }
-          showModal = { showModal }
-      /> }
-    </div>
+          { showCard === true && <Card
+              modal = { showCard }
+              selectedCard = { selectedCard }
+              showModal = { showModal }
+              onClickCheckBtn = { checkItem }
+          /> }
+        </div>
+      </div>
   )
 })
 

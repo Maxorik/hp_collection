@@ -1,14 +1,27 @@
 @media only screen and (max-device-width: 1000px) {
   .card-grid {
-    margin: 2px;
+    margin-left: 8px;
     grid-template-columns: repeat(3, 32%);
     grid-gap: 2px;
   }
   .card-preview {
     height: 10em;
   }
-  .modal-footer {
-    margin-left: 250px;
+  .button {
+    height: 40px;
+    padding: 6px 2px;
+    margin: 0;
+  }
+  .header-logo-title-img {
+    width: 200px;
+    margin: 0;
+    height: auto;
+  }
+  .collection-info-header {
+    margin-left: 48px;
+  }
+  .header-text {
+    margin: 0 0 2px -10px;
   }
 }
 

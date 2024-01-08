@@ -2,34 +2,27 @@ import { makeAutoObservable } from "mobx";
 import catalog from './catalog_min'
 
 class Collection {
-    collectionList = [];
-
     constructor() {
-        makeAutoObservable(this, {}, { deep:false })
+        makeAutoObservable(this, {}, { deep:false }) // FIXME для "глубокмх" массивов (ключ = объект) использовать deep:true
     }
+
+    collectionList = [];
 
     /** получаем коллекцию */
     getCatalog() {
         this.collectionList = catalog.filter(item => item.code.match(/hp\d+/) && +item.year > 2017);
     }
 
-    /** обновление для рендера */
-    updateCollection() {
-        const clone = this.collectionList.map(item => item);
-        this.collectionList = [];
-        this.collectionList = clone;
+    /** Состояние коллекции */
+    get checkedItems() {
+        return `${ this.collectionList.filter((item) => item.checked === 'true').length }/${ this.collectionList.length }`;
     }
 
     /** отметить найденный экземпляр */
-    setCheck(e) {
+    setCheck(id, state) {
         // TODO api
-        // const selectedItem = catalog.find(item => item.id === id);
-        catalog.map((item) => {
-           if (item.code === e.target.id) {
-               item.checked = 'true';
-               this.updateCollection();
-           }
-        })
+
+        this.collectionList = this.collectionList.map(item => item.code === id ? { ...item, checked: state.toString() } : item );
     }
 }
 
