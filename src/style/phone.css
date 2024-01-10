@@ -9,7 +9,6 @@
   }
   .button {
     height: 40px;
-    padding: 6px 2px;
     margin: 0;
   }
   .header-logo-title-img {
@@ -18,10 +17,25 @@
     height: auto;
   }
   .collection-info-header {
-    margin-left: 48px;
+    margin-left: 24px;
+  }
+  .header {
+    height: auto;
   }
   .header-text {
     margin: 0 0 2px -10px;
+  }
+  .collection-body {
+    margin-top: 84px;
+  }
+  .modal-window {
+    width: 97%;
+  }
+  .modal-card-name {
+    top: 54.5%;
+  }
+  .modal-card-info {
+    margin-top: 40px;
   }
 }
 
