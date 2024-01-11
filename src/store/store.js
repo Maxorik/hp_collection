@@ -11,13 +11,22 @@ class Collection {
     /** получаем коллекцию */
     getCatalog() {
         const localCollection = localStorage.getItem('hp_collection') ? JSON.parse(localStorage.getItem('hp_collection')) : [];
+
+        /** отображаем только новые наборы */
         this.collectionList = catalog.filter(item => item.code.match(/hp\d+/) && +item.year > 2017);
-        this.collectionList.forEach((item, index) => {
-            item.checked = item.code === localCollection[index] && localCollection[index].code ? localCollection[index].checked : item.checked;
-        })
+
+        /** запрашиваем отмеченные фигурки */
+        this.collectionList = this.collectionList.map(item => {
+            const newItem = {...item};
+            const localItem = localCollection.find(bItem => bItem.code === item.code);
+            if (localItem) {
+                newItem.checked = localItem.checked;
+            }
+            return newItem;
+        });
     }
 
-    /** Состояние коллекции */
+    /** Завершенность коллекции */
     get checkedItems() {
         return `${ this.collectionList.filter((item) => item.checked === 'true').length }/${ this.collectionList.length }`;
     }

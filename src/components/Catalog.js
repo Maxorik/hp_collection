@@ -4,7 +4,7 @@ import collection from "../store/store";
 import Card from "./Card";
 import '../style/index.css'
 
-const Catalog = observer(() => {
+const Catalog = observer(({ showChecked }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
@@ -25,7 +25,7 @@ const Catalog = observer(() => {
       <div className='collection-body'>
         <div className="card-grid">
           { collection.collectionList.map((item) => {
-            return <div
+            return (showChecked || !showChecked && item.checked === 'false') && <div
                 className={ `card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}` }
                 key={ item.code }
                 onClick={ (e) => { !e.target.classList.contains('button') && showModal(true, item) } }

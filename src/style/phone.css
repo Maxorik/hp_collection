@@ -32,10 +32,13 @@
     width: 97%;
   }
   .modal-card-name {
-    top: 54.5%;
+    top: 60.5%;
   }
   .modal-card-info {
-    margin-top: 40px;
+    margin-top: 80px;
+  }
+  .modal-footer {
+    margin-top: 200px;
   }
 }
 
