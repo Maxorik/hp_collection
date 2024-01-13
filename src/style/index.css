@@ -253,7 +253,37 @@ a {
   display: block;
 }
 
-.header-filter {
-  text-align: center;
-  margin-bottom: 3px;
+.footer {
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2px 5px;
+}
+
+.footer-opener {
+  width: 100%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.footer-filters {
+  height: auto;
+  transition: height 0.5ms ease;
+}
+
+.hidden-content {
+  height: 0;
+}
+
+.vertical-divider {
+  height: 40px;
+  width: 1px;
+  border-left: 2px solid #000;
+  margin: 0 10px;
+}
+
+.footer-filters-content {
+  margin: 8px 2px;
 }

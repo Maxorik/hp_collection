@@ -4,7 +4,7 @@ import collection from "../store/store";
 import Card from "./Card";
 import '../style/index.css'
 
-const Catalog = observer(({ showChecked }) => {
+const Catalog = observer(({ showChecked, itemName }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
@@ -21,11 +21,20 @@ const Catalog = observer(({ showChecked }) => {
     collection.setCheck(id, state)
   }
 
+  /** Определяем, что показывать на основании фильтров */
+  function setVisible(item) {
+    let nameMatched = true;
+    if (itemName !== '') {
+      nameMatched = item.name.toLowerCase().indexOf(itemName) > -1;
+    }
+    return nameMatched && (showChecked || !showChecked && item.checked === 'false');
+  }
+
   return (
       <div className='collection-body'>
         <div className="card-grid">
           { collection.collectionList.map((item) => {
-            return (showChecked || !showChecked && item.checked === 'false') && <div
+            return setVisible(item) && <div
                 className={ `card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}` }
                 key={ item.code }
                 onClick={ (e) => { !e.target.classList.contains('button') && showModal(true, item) } }
