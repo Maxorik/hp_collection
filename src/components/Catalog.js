@@ -4,7 +4,7 @@ import collection from "../store/store";
 import Card from "./Card";
 import '../style/index.css'
 
-const Catalog = observer(({ showChecked, itemName }) => {
+const Catalog = observer(({ showChecked, filterItemName, filterYear, filterSetCode }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
@@ -23,11 +23,10 @@ const Catalog = observer(({ showChecked, itemName }) => {
 
   /** Определяем, что показывать на основании фильтров */
   function setVisible(item) {
-    let nameMatched = true;
-    if (itemName !== '') {
-      nameMatched = item.name.toLowerCase().indexOf(itemName) > -1;
-    }
-    return nameMatched && (showChecked || !showChecked && item.checked === 'false');
+    const nameMatched = filterItemName === '' || item.name.toLowerCase().includes(filterItemName);
+    const yearMatched = filterYear === '' || item.year.includes(filterYear);
+    const setCodeMatched = filterSetCode === '' || item.setCode.includes(filterSetCode);
+    return nameMatched && setCodeMatched && yearMatched && (showChecked || !showChecked && item.checked === 'false');
   }
 
   return (

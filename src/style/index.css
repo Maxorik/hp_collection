@@ -260,20 +260,34 @@ a {
   bottom: 0;
   width: 100%;
   padding: 2px 5px;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .footer-opener {
   width: 100%;
-  text-align: right;
-  font-weight: bold;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  color: transparent;
+  height: 26px;
+}
+
+.footer-opener.up {
+  background-image: url('../../public/img/arrow_up.svg');
+}
+
+.footer-opener.down {
+  background-image: url('../../public/img/arrow_down.svg');
 }
 
 .footer-filters {
-  height: auto;
-  transition: height 0.5ms ease;
+  height: 300px;
+  transition: height 0.3s ease-out;
 }
 
-.hidden-content {
+.footer-filters.hidden-content {
   height: 0;
 }
 
@@ -286,4 +300,29 @@ a {
 
 .footer-filters-content {
   margin: 8px 2px;
+  display: grid;
+}
+
+.filter-input {
+  width: 270px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.filter-name-clean-btn {
+  width: 27px;
+  height: 27px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('../../public/img/trash.svg');
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
 }
