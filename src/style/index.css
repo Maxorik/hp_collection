@@ -300,7 +300,9 @@ a {
 
 .footer-filters-content {
   margin: 8px 2px;
-  display: grid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .filter-input {
@@ -325,4 +327,14 @@ a {
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
+}
+
+.filter-reset-btn {
+  border-radius: 4px;
+  background-color: rgb(176, 1, 1);
+  color: #fff;
+  padding: 4px;
+  width: 170px;
+  margin: 20px auto;
+  text-align: center;
 }

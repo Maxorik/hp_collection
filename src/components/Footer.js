@@ -1,5 +1,6 @@
 import {observer} from "mobx-react-lite";
 import {useState} from "react";
+import collection from "../store/store";
 
 const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemName,
                         filterItemName, setFilteredYear, filterYear, filterSetCode, setFilteredSetCode }) => {
@@ -67,6 +68,13 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                         checked={ showChecked }
                         onChange={ (e) => setVisibleCheckedItems(e.target.checked) }
                     /> Показывать отмеченные </label>
+
+                    <div
+                        className='filter-reset-btn'
+                        onClick={ () => collection.resetLocalStorage() }
+                    >
+                        Обнулить коллекцию
+                    </div>
                 </div>
             </div>
         </div>

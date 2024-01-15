@@ -23,7 +23,7 @@ const Catalog = observer(({ showChecked, filterItemName, filterYear, filterSetCo
 
   /** Определяем, что показывать на основании фильтров */
   function setVisible(item) {
-    const nameMatched = filterItemName === '' || item.name.toLowerCase().includes(filterItemName);
+    const nameMatched = filterItemName === '' || item.name.toLowerCase().includes(filterItemName.toLowerCase());
     const yearMatched = filterYear === '' || item.year.includes(filterYear);
     const setCodeMatched = filterSetCode === '' || item.setCode.includes(filterSetCode);
     return nameMatched && setCodeMatched && yearMatched && (showChecked || !showChecked && item.checked === 'false');

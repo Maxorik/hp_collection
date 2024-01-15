@@ -44,6 +44,15 @@ class Collection {
         } );
         localStorage.setItem('hp_collection', JSON.stringify(collection));
     }
+
+    /** Сбросить локальный стор */
+    resetLocalStorage() {
+        this.collectionList = this.collectionList.map(item => {
+            return { ...item, checked: 'false' }
+        })
+
+        this.updateLocalStorage();
+    }
 }
 
 export default new Collection()
