@@ -1,27 +1,26 @@
 const start = document.querySelector('#get-btn');
+const copy = document.querySelector('#copy-btn');
 const res = document.querySelector('#res');
 
 const addItems = () => {
     const catalog=[];
     const items = document.querySelectorAll('.set');
+    console.clear();
     items.forEach((item, i) => {
         const meta = item.querySelector('.meta');
         const year = item.querySelector('.year');
         const name = item.querySelector('.name');
         const code = meta.querySelector('span');
-        const setsCount = item.querySelector('.insets').firstElementChild;
         const setCodeParent = item.querySelector('dd.tags');
-        const setCode = setCodeParent ? setCodeParent.firstElementChild : null;
+        const setCode = setCodeParent ?  Array.from(setCodeParent.querySelectorAll('a')).map(item => item.innerHTML) : null;
 
         const data = {};
-        data.img = item.firstElementChild.href.toLowerCase();
+        data.img = item.querySelector('a').href.toLowerCase();
         data.year = year ? year.innerHTML : '0';
         data.name = name ? name.innerHTML : 'Незнакомец';
-        data.code = code ? code.innerHTML.match(/\w+/g)[0].toLowerCase() : '0000';
-        data.setsCount = setsCount ? setsCount.innerHTML.toLowerCase() : '1 set';
-        data.setCode = setCode ? setCode.innerHTML.toLowerCase() : '';
+        data.id = code ? code.innerHTML.match(/\w+/g)[0].toLowerCase() : '0000';
+        data.setCode = setCode || [];
         data.checked = 'false';
-        data.imgLocalSource = './assets/images/' + data.code.toLowerCase() + '.png';
 
         catalog.push(data);
     })
@@ -29,7 +28,7 @@ const addItems = () => {
     /** Различные способы вывода парсинга *****************************************************************************/
 
     /** Стандартный парсинг для json */
-    const htmlStrings1 = catalog.map(item =>`{"img": "${item.img}", "name": "${item.name}", "code": "${item.code}", "year": "${item.year}", "setsCount": "${item.setsCount}", "checked": "false", "imgLocalSource": "${item.imgLocalSource}", "setCode": "${item.setCode}"},`
+    const htmlStrings1 = catalog.map(item =>`{"img": "${item.img}", "name": "${item.name}", "id": "${item.id}", "year": "${item.year}", "checked": "false", "setCode": "${item.setCode.join(' ')}"},`
     );
     /** Парсинг для сброса отмеченных */
     const htmlStrings2 = catalog.map(item =>`{"code": "${item.code}", "checked": "false"},`
@@ -45,7 +44,7 @@ const addItems = () => {
         <div class="item">
             <img src="${item.img}" alt="${item.name}" class="item-image">
                 <h3>${item.name}</h3>
-                <p>code: ${item.code}</p>
+                <p>code: ${item.id}</p>
                 <p>Set Code: ${item.setCode}</p>
                 <p>Sets Count: ${item.setsCount}</p>
                 <p>Year: ${item.year}</p>
@@ -53,8 +52,9 @@ const addItems = () => {
         </div>`
     );
 
-    res.innerHTML = htmlStrings1.reverse().join('');
+    res.innerHTML = `const catalog = [${htmlStrings1.join('')}]\n\n export default catalog;`;
     console.log(catalog)
 }
 
 start.addEventListener('click', addItems);
+copy.addEventListener('click', () => navigator.clipboard.writeText(res.innerHTML).then(() => console.log('done!')));
