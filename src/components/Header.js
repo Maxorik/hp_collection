@@ -1,12 +1,12 @@
 import collection from "../store/store";
 import {observer} from "mobx-react-lite";
 
-const Header = observer(() => {
+const Header = observer(({ showModern }) => {
   return (
     <div className="header">
         <div className='collection-info-header'>
             <img src='/img/title2.png' className='header-logo-title-img' />
-            <p className='header-text'>{ collection.checkedItems  }</p>
+            <p className='header-text'>{ showModern ? collection.checkedItemsModern : collection.checkedItems  }</p>
         </div>
     </div>
   );

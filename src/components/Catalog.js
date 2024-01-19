@@ -4,7 +4,7 @@ import collection from "../store/store";
 import Card from "./Card";
 import '../style/index.css'
 
-const Catalog = observer(({ showChecked, filterItemName, filterYear, filterSetCode }) => {
+const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear, filterSetCode }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
@@ -26,7 +26,9 @@ const Catalog = observer(({ showChecked, filterItemName, filterYear, filterSetCo
     const nameMatched = filterItemName === '' || item.name.toLowerCase().includes(filterItemName.toLowerCase());
     const yearMatched = filterYear === '' || item.year.includes(filterYear);
     const setCodeMatched = filterSetCode === '' || item.setCode.includes(filterSetCode);
-    return nameMatched && setCodeMatched && yearMatched && (showChecked || !showChecked && item.checked === 'false');
+    const onlyChecked = showChecked || !showChecked && item.checked === 'false';
+    const onlyModern = !showModern || showModern && +item.year > 2017;
+    return nameMatched && setCodeMatched && yearMatched && onlyChecked && onlyModern;
   }
 
   return (
@@ -35,16 +37,16 @@ const Catalog = observer(({ showChecked, filterItemName, filterYear, filterSetCo
           { collection.collectionList.map((item) => {
             return setVisible(item) && <div
                 className={ `card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}` }
-                key={ item.code }
+                key={ item.id }
                 onClick={ (e) => { !e.target.classList.contains('button') && showModal(true, item) } }
             >
               <div className='card-preview-image-container'>
-                <img alt={ item.name } className='card-preview-image' src={ `/catalog_images/${[item.code]}.png` }/>
+                <img alt={ item.name } className='card-preview-image' src={ `/catalog_images/${[item.id]}.png` }/>
               </div>
               { item.checked === 'false' && <div
                   className='button button-check'
-                  id={ item.code }
-                  onClick={ () => checkItem(item.code, true) }>
+                  id={ item.id }
+                  onClick={ () => checkItem(item.id, true) }>
                 В коллекцию</div> }
             </div>
           } ) }

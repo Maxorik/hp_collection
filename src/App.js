@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
     const [showChecked, setShowChecked] = useState(true);
+    const [showModern, setShowModern] = useState(true);
     const [filterItemName, setFilterItemName] = useState('');
     const [filterYear, setFilterYear] = useState('');
     const [filterSetCode, setFilterSetCode] = useState('');
@@ -12,6 +13,11 @@ function App() {
     /** Чекбокс "показывать имеющиеся в коллекции" */
     const setVisibleCheckedItems = (state) => {
         setShowChecked(state);
+    }
+
+    /** Чекбокс для наборов "новой волны" после 2017 года */
+    const setVisibleModernItems = (state) => {
+        setShowModern(state);
     }
 
     /** Фильтр по имени */
@@ -31,9 +37,12 @@ function App() {
 
     return (
         <>
-            <Header />
+            <Header
+                showModern = { showModern }
+            />
             <Catalog
                 showChecked = { showChecked }
+                showModern = { showModern }
                 filterItemName = { filterItemName }
                 filterYear = { filterYear }
                 filterSetCode = { filterSetCode }
@@ -47,6 +56,8 @@ function App() {
                 setFilteredYear = { setFilteredYear }
                 filterSetCode = { filterSetCode }
                 setFilteredSetCode = { setFilteredSetCode }
+                showModern = { showModern }
+                setVisibleModernItems = { setVisibleModernItems }
             />
         </>
     );

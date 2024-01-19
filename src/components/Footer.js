@@ -3,7 +3,7 @@ import {useState} from "react";
 import collection from "../store/store";
 
 const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemName,
-                        filterItemName, setFilteredYear, filterYear, filterSetCode, setFilteredSetCode }) => {
+    filterItemName, setFilteredYear, filterYear, filterSetCode, setFilteredSetCode, showModern, setVisibleModernItems }) => {
     const [filtersClassList, setFiltersClassList] = useState('footer-filters hidden-content');
     const [footerOpenerClassList, setFooterOpenerClassList] = useState('footer-opener up');
 
@@ -63,11 +63,30 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                         />
                     </div>
 
-                    <label><input
-                        type='checkbox'
-                        checked={ showChecked }
-                        onChange={ (e) => setVisibleCheckedItems(e.target.checked) }
-                    /> Показывать отмеченные </label>
+                    <div className='filter-all-checkbox-container'>
+                        <div className='filter-checkbox-container'>
+                            <input
+                                type='checkbox'
+                                checked={ showChecked }
+                                onChange={ (e) => setVisibleCheckedItems(e.target.checked) }
+                                className='checkbox'
+                                id='show-checked-checkbox'
+                            />
+                            <label htmlFor="show-checked-checkbox" className="checkbox-label"/>
+                            <p>Показывать отмеченные</p>
+                        </div>
+                        <div className='filter-checkbox-container'>
+                            <input
+                                type='checkbox'
+                                checked={ showModern }
+                                onChange={ (e) => setVisibleModernItems(e.target.checked) }
+                                className='checkbox'
+                                id='show-modern-checkbox'
+                            />
+                            <label htmlFor="show-modern-checkbox" className="checkbox-label"/>
+                            <p>Показывать 2018г+ </p>
+                        </div>
+                    </div>
 
                     <div
                         className='filter-reset-btn'
