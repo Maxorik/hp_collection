@@ -11,7 +11,7 @@ function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
 
     const getHref = (href) => {
         const parsedHrefCode = href.match(/\d+/)[0];
-        return `https://www.lego.com/en-us/product/${parsedHrefCode}`;
+        return `https://www.lego.com/en-us/service/buildinginstructions/${parsedHrefCode}`;
     }
 
     return (
