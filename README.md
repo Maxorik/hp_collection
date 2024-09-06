@@ -9,7 +9,7 @@
 
 В приложении есть фильтр по фигуркам, находится в правом нижнем углу. По умолчанию отображаются только фигурки, выпущенные с 2018 года. Если вам также интересны и старые фигурки, настройте это в фильтрах, переключив тумблер.
 
-Если вам понравилось приложение и вы хотели бы в нем что-то улучшить, напишите мне t.me/maxorik
+Если вам понравилось приложение и вы хотели бы в нем что-то улучшить, напишите мне [в мой профиль Telegram](https://t.me/maxorik)
 
 *********************************************************************************
 #### [Run app](https://maxorik.github.io/hp_collection/)
@@ -21,4 +21,4 @@ Your collection information is stored personally on the device the app is used o
 
 There is a figurine filter in the app, located in the bottom right corner. By default, only figures released since 2018 are displayed. If you're also interested in older figures, customize that in the filters by toggling the toggle switch.
 
-If you like the app and would like to improve something in it, message me t.me/maxorik
+If you like the app and would like to improve something in it, message me [to Telegram](https://t.me/maxorik)
