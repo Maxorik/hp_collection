@@ -13,6 +13,7 @@
 
 *********************************************************************************
 :zap:[Run app](https://maxorik.github.io/hp_collection/):zap:
+
 Hi! This application is designed to keep track of the collection of lego minifigures of the Harry Potter series. The database of minifigures is taken from **bricklink.com** and periodically updated.
 
 The advantage over bricklink and others - the speed of the application and a precise focus on the series of “Harry Potter”. No registration required, no advertising.
