@@ -5,3 +5,4 @@
 /src/store/config.js
 .idea
 *.bak
+/html-parser/brickset.html

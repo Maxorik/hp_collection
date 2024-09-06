@@ -23,8 +23,8 @@
   color: #2e2828cf;
 }
 
-.collection-body, .header, .footer {
-  background: #d5ca9b;
+html, .collection-body, .header, .footer {
+  background: #dedede;
 }
 
 body {
@@ -211,7 +211,9 @@ a {
 }
 
 .modal-footer {
-  margin: 185px 0 0 120px;
+  margin-top: 185px;
+  width: 100%;
+  justify-content: right;
   display: flex;
 }
 
@@ -349,9 +351,9 @@ input[type="checkbox"] {
   background-color: rgb(176, 1, 1);
   color: #fff;
   padding: 4px;
-  width: 170px;
   margin: 20px auto;
   text-align: center;
+  cursor: pointer;
 }
 
 .filter-all-checkbox-container {

@@ -1,6 +1,7 @@
 import {observer} from "mobx-react-lite";
 import {useState} from "react";
 import collection from "../store/store";
+import { locale, lang } from '../store/locale'
 
 const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemName,
     filterItemName, setFilteredYear, filterYear, filterSetCode, setFilteredSetCode, showModern, setVisibleModernItems }) => {
@@ -18,13 +19,13 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
             <div className={ footerOpenerClassList } onClick={ () => filterVisibilityToggle() }/>
             <div className={ filtersClassList }>
                 <div className='footer-filters-content'>
-                    <p className='footer-text'>Найти по названию (англ):</p>
+                    <p className='footer-text'>{ lang[locale].filterName }:</p>
                     <div style={{ display: 'flex' }}>
                         <input
                             type='text'
                             className='filter-input'
                             value={ filterItemName }
-                            placeholder='Введите имя'
+                            placeholder={ lang[locale].nameTip }
                             onChange={ (e) => setFilteredItemName(e) }
                         />
                         <div
@@ -33,13 +34,13 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                         />
                     </div>
 
-                    <p className='footer-text'>Найти по году:</p>
+                    <p className='footer-text'>{ lang[locale].filterYear }:</p>
                     <div style={{ display: 'flex' }}>
                         <input
                             type='text'
                             className='filter-input'
                             value={ filterYear }
-                            placeholder='Введите год'
+                            placeholder={ lang[locale].yearTip }
                             onChange={ (e) => setFilteredYear(e) }
                         />
                         <div
@@ -48,13 +49,13 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                         />
                     </div>
 
-                    <p className='footer-text'>Найти по коду набора:</p>
+                    <p className='footer-text'>{ lang[locale].filterCode }:</p>
                     <div style={{ display: 'flex' }}>
                         <input
                             type='text'
                             className='filter-input'
                             value={ filterSetCode }
-                            placeholder='Введите код набора'
+                            placeholder={ lang[locale].codeTip }
                             onChange={ (e) => setFilteredSetCode(e) }
                         />
                         <div
@@ -73,7 +74,7 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                                 id='show-checked-checkbox'
                             />
                             <label htmlFor="show-checked-checkbox" className="checkbox-label"/>
-                            <p>Показывать отмеченные</p>
+                            <p>{ lang[locale].showCheckedTip }</p>
                         </div>
                         <div className='filter-checkbox-container'>
                             <input
@@ -84,16 +85,16 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                                 id='show-modern-checkbox'
                             />
                             <label htmlFor="show-modern-checkbox" className="checkbox-label"/>
-                            <p>Показывать 2018г+ </p>
+                            <p>{ lang[locale].showOnlynewTip }</p>
                         </div>
                     </div>
 
-                    <div
+                    <button
                         className='filter-reset-btn'
                         onClick={ () => collection.resetLocalStorage() }
                     >
-                        Обнулить коллекцию
-                    </div>
+                        { lang[locale].discardBtn }
+                    </button>
                 </div>
             </div>
         </div>

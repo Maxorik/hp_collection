@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
 import collection from "../store/store";
+import { locale, lang } from '../store/locale'
 import Card from "./Card";
 import '../style/index.css'
 
@@ -47,7 +48,8 @@ const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear,
                   className='button button-check'
                   id={ item.id }
                   onClick={ () => checkItem(item.id, true) }>
-                В коллекцию</div> }
+                { lang[locale].addBtn }
+              </div> }
             </div>
           } ) }
 
