@@ -40,5 +40,9 @@
   .modal-footer {
     margin-top: 200px;
   }
+  .footer {
+    bottom: 6px;
+    width: 100%;
+  }
 }
 

@@ -14,7 +14,8 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
         footerOpenerClassList.indexOf('up') > -1 ? setFooterOpenerClassList('footer-opener down') : setFooterOpenerClassList('footer-opener up');
     }
 
-    return (
+    return ( <>
+        <div className="footer-gradient"/>
         <div className="footer">
             <div className={ footerOpenerClassList } onClick={ () => filterVisibilityToggle() }/>
             <div className={ filtersClassList }>
@@ -98,6 +99,7 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                 </div>
             </div>
         </div>
+    </>
     );
 })
 
