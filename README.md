@@ -1,7 +1,7 @@
 ### The app is available in English! The English description is below :point_down:
-#### [Открыть приложение](https://maxorik.github.io/hp_collection/)
+:zap:[Открыть приложение](https://maxorik.github.io/hp_collection/):zap:
 
-Привет! Это приложение предназначено для учета коллекции минифигурок лего серии "Гарри Поттер". База минифигурок берется с bricklink.com и периодически обновляется.
+Привет! Это приложение предназначено для учета коллекции минифигурок лего серии "Гарри Поттер". База минифигурок берется с **bricklink.com** и периодически обновляется.
 
 Преимущество перед бриклинком и остальными - скорость работы приложения и точечная направленность на серию "Гарри Поттер". Никакая регистрация не требуется, рекламы нет.
 
@@ -12,8 +12,8 @@
 Если вам понравилось приложение и вы хотели бы в нем что-то улучшить, напишите мне [в мой профиль Telegram](https://t.me/maxorik)
 
 *********************************************************************************
-#### [Run app](https://maxorik.github.io/hp_collection/)
-Hi! This application is designed to keep track of the collection of lego minifigures of the Harry Potter series. The database of minifigures is taken from bricklink.com and periodically updated.
+:zap:[Run app](https://maxorik.github.io/hp_collection/):zap:
+Hi! This application is designed to keep track of the collection of lego minifigures of the Harry Potter series. The database of minifigures is taken from **bricklink.com** and periodically updated.
 
 The advantage over bricklink and others - the speed of the application and a precise focus on the series of “Harry Potter”. No registration required, no advertising.
 
