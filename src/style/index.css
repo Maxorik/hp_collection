@@ -244,7 +244,7 @@ a {
 
 .collection-body {
   margin-top: 70px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .header-text {
@@ -286,7 +286,7 @@ a {
 .footer {
   position: fixed;
   right: 0;
-  bottom: -12px;
+  bottom: -18px;
   padding: 2px 5px;
   border-radius: 6px 6px 0 0;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
@@ -300,8 +300,7 @@ a {
   border-radius: 100%;
   position: absolute;
   right: 10px;
-  bottom: 18px;
-  background: #fff;
+  bottom: 24px;
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
@@ -313,6 +312,8 @@ a {
   background-image: url('../../public/img/filter.png');
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
   animation: glowing 1300ms infinite;
+  background-color: #ec1c23;
+  background-size: 60%;
 }
 
 @keyframes glowing {
@@ -380,7 +381,7 @@ input[type="checkbox"] {
   background-color: rgb(176, 1, 1);
   color: #fff;
   padding: 4px;
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
   cursor: pointer;
 }
