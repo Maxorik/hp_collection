@@ -311,15 +311,8 @@ a {
 .footer-opener.up {
   background-image: url('../../public/img/filter.png');
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
-  animation: glowing 1300ms infinite;
-  background-color: #ec1c23;
+  background-color: #51497c;
   background-size: 60%;
-}
-
-@keyframes glowing {
-  0% { box-shadow: 0 0 5px #a8a505; }
-  50% { box-shadow: 0 0 20px #e8de19; }
-  100% { box-shadow: 0 0 5px #a8a505; }
 }
 
 .footer-opener.down {
@@ -359,7 +352,7 @@ a {
 
 .filter-name-clean-btn {
   width: 27px;
-  height: 27px;
+  height: 100%;
   border: 2px solid #000;
   border-radius: 4px;
   cursor: pointer;
@@ -389,6 +382,7 @@ input[type="checkbox"] {
 .filter-all-checkbox-container {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .filter-checkbox-container {
@@ -437,4 +431,13 @@ input[type="checkbox"] {
 
 .checkbox:checked + .checkbox-label:before {
   left: calc(100% - 24px);
+}
+
+.input-container {
+  display: flex;
+  height: 28px;
+}
+
+.input-container > input {
+  height: 100%;
 }

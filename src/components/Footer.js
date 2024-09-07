@@ -21,7 +21,7 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
             <div className={ filtersClassList }>
                 <div className='footer-filters-content'>
                     <p className='footer-text'>{ lang[locale].filterName }:</p>
-                    <div style={{ display: 'flex' }}>
+                    <div className='input-container'>
                         <input
                             type='text'
                             className='filter-input'
@@ -36,7 +36,7 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                     </div>
 
                     <p className='footer-text'>{ lang[locale].filterYear }:</p>
-                    <div style={{ display: 'flex' }}>
+                    <div className='input-container'>
                         <input
                             type='text'
                             className='filter-input'
@@ -49,9 +49,8 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                             onClick={ (e) => setFilteredYear(e) }
                         />
                     </div>
-
                     <p className='footer-text'>{ lang[locale].filterCode }:</p>
-                    <div style={{ display: 'flex' }}>
+                    <div className='input-container'>
                         <input
                             type='text'
                             className='filter-input'
