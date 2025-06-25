@@ -6,3 +6,4 @@
 .idea
 *.bak
 /html-parser/brickset.html
+/html-parser/init_data.html
