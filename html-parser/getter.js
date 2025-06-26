@@ -14,15 +14,20 @@ const addItems = () => {
         const setCodeParent = item.querySelector('dd.tags');
         const setCode = setCodeParent ?  Array.from(setCodeParent.querySelectorAll('a')).map(item => item.innerHTML) : null;
 
+        // проверка на корректное имя
         const data = {};
         data.img = item.querySelector('a').href.toLowerCase();
         data.year = year ? year.innerHTML : '0';
         data.name = name ? name.innerHTML : 'Незнакомец';
-        data.id = code ? code.innerHTML.match(/\w+/g)[0].toLowerCase() : '0000';
+        data.id = code ? code.innerHTML.match(/\w+/g)[0].toLowerCase() : null;
         data.setCode = setCode || [];
         data.checked = 'false';
 
-        catalog.push(data);
+        // отсекаем не персонажей
+        const invalidNameSymbols = /[^a-z\-'"\s]+/gi
+        if (!invalidNameSymbols.test(data.name) && data.id && data.id.includes('hp')) {
+            catalog.push(data);
+        }
     })
 
     /** Различные способы вывода парсинга *****************************************************************************/
