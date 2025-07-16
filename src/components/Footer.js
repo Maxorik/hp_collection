@@ -20,62 +20,65 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
             <div className={ footerOpenerClassList } onClick={ () => filterVisibilityToggle() }/>
             <div className={ filtersClassList }>
                 <div className='footer-filters-content'>
-                    <p className='footer-text'>{ lang[locale].filterName }:</p>
+                    <p className='footer-text'>{ lang[locale].searchTitle }</p><br />
                     <div className='input-container'>
+                        <p className='footer-text footer-input-title-left'>{lang[locale].name}</p>
                         <input
                             type='text'
                             className='filter-input'
-                            value={ filterItemName }
-                            placeholder={ lang[locale].nameTip }
-                            onChange={ (e) => setFilteredItemName(e) }
+                            value={filterItemName}
+                            // placeholder={lang[locale].nameTip}
+                            onChange={(e) => setFilteredItemName(e)}
                         />
                         <div
                             className='filter-name-clean-btn'
-                            onClick={ (e) => setFilteredItemName(e) }
+                            onClick={(e) => setFilteredItemName(e)}
                         />
                     </div>
 
-                    <p className='footer-text'>{ lang[locale].filterYear }:</p>
                     <div className='input-container'>
+                        <p className='footer-text footer-input-title-left'>{lang[locale].year}</p>
                         <input
                             type='text'
                             className='filter-input'
-                            value={ filterYear }
-                            placeholder={ lang[locale].yearTip }
-                            onChange={ (e) => setFilteredYear(e) }
+                            value={filterYear}
+                            // placeholder={lang[locale].yearTip}
+                            onChange={(e) => setFilteredYear(e)}
                         />
                         <div
                             className='filter-name-clean-btn'
-                            onClick={ (e) => setFilteredYear(e) }
+                            onClick={(e) => setFilteredYear(e)}
                         />
                     </div>
-                    <p className='footer-text'>{ lang[locale].filterCode }:</p>
+
                     <div className='input-container'>
+                        <p className='footer-text footer-input-title-left'>{lang[locale].set}</p>
                         <input
                             type='text'
                             className='filter-input'
-                            value={ filterSetCode }
-                            placeholder={ lang[locale].codeTip }
-                            onChange={ (e) => setFilteredSetCode(e) }
+                            value={filterSetCode}
+                            // placeholder={lang[locale].codeTip}
+                            onChange={(e) => setFilteredSetCode(e)}
                         />
                         <div
                             className='filter-name-clean-btn'
-                            onClick={ (e) => setFilteredSetCode(e) }
+                            onClick={(e) => setFilteredSetCode(e)}
                         />
                     </div>
 
                     <div className='filter-all-checkbox-container'>
-                        <div className='filter-checkbox-container'>
-                            <input
-                                type='checkbox'
-                                checked={ showChecked }
-                                onChange={ (e) => setVisibleCheckedItems(e.target.checked) }
-                                className='checkbox'
-                                id='show-checked-checkbox'
-                            />
-                            <label htmlFor="show-checked-checkbox" className="checkbox-label"/>
-                            <p>{ lang[locale].showCheckedTip }</p>
-                        </div>
+                        {/* чекбокс "показывать отмеченные" */}
+                        {/*<div className='filter-checkbox-container'>*/}
+                        {/*    <input*/}
+                        {/*        type='checkbox'*/}
+                        {/*        checked={ showChecked }*/}
+                        {/*        onChange={ (e) => setVisibleCheckedItems(e.target.checked) }*/}
+                        {/*        className='checkbox'*/}
+                        {/*        id='show-checked-checkbox'*/}
+                        {/*    />*/}
+                        {/*    <label htmlFor="show-checked-checkbox" className="checkbox-label"/>*/}
+                        {/*    <p>{ lang[locale].showCheckedTip }</p>*/}
+                        {/*</div>*/}
                         <div className='filter-checkbox-container'>
                             <input
                                 type='checkbox'
@@ -89,12 +92,13 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                         </div>
                     </div>
 
-                    <button
-                        className='filter-reset-btn'
-                        onClick={ () => collection.resetLocalStorage() }
-                    >
-                        { lang[locale].discardBtn }
-                    </button>
+                    {/* сброс коллекции */}
+                    {/*<button*/}
+                    {/*    className='filter-reset-btn'*/}
+                    {/*    onClick={ () => collection.resetLocalStorage() }*/}
+                    {/*>*/}
+                    {/*    { lang[locale].discardBtn }*/}
+                    {/*</button>*/}
                 </div>
             </div>
         </div>

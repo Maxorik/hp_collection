@@ -24,7 +24,7 @@
 }
 
 html, .collection-body, .header {
-  background: #dedede;
+  background: rgb(248, 248, 248);
 }
 
 body {
@@ -240,10 +240,11 @@ a {
   z-index: 99;
   height: 70px;
   overflow: hidden;
+  border-bottom: solid 2px rgb(255, 213, 2);
 }
 
 .collection-body {
-  margin-top: 70px;
+  margin-top: 74px;
   margin-bottom: 80px;
 }
 
@@ -321,7 +322,7 @@ a {
 }
 
 .footer-filters {
-  height: 340px;
+  height: 285px;
   transition: height 0.3s ease-out;
   font-weight: bold;
 }
@@ -345,9 +346,12 @@ a {
 }
 
 .filter-input {
-  width: 270px;
+  width: 225px;
   margin-bottom: 20px;
   border-radius: 4px;
+  color: #000;
+  font-weight: bold;
+  padding: 0 4px;
 }
 
 .filter-name-clean-btn {
@@ -436,8 +440,16 @@ input[type="checkbox"] {
 .input-container {
   display: flex;
   height: 28px;
+  gap: 6px;
+  margin-bottom: 10px;
 }
 
 .input-container > input {
   height: 100%;
+}
+
+.footer-input-title-left {
+  width: 50px;
+  text-align: right;
+  line-height: 25px;
 }

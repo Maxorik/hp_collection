@@ -16,10 +16,13 @@ const lang = {
         removeBtn: 'Из коллекции',
         closeBtn: 'Закрыть',
         year: 'Год',
+        name: 'Имя',
+        set: 'Набор',
         includeIn: 'Встречается в',
         inCollection: 'В коллекции',
         yes: 'Да',
-        no: 'Нет'
+        no: 'Нет',
+        searchTitle: 'Поиск по коллекции'
     },
     en: {
         filterName: 'Search by name',
@@ -34,12 +37,15 @@ const lang = {
         addBtn: 'Got it!',
         removeBtn: 'Remove',
         closeBtn: 'Close',
-        year: 'Year of release',
+        year: 'Year',
+        name: 'Name',
+        set: 'Set',
         includeIn: 'It\'s found in',
         inCollection: 'In the collection',
         yes: 'Yes',
         no: 'No',
         nonameFigure: 'Stranger',
+        searchTitle: 'Search by collection'
     }
 }
 

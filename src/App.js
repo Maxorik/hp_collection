@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
     const [showChecked, setShowChecked] = useState(true);
-    const [showModern, setShowModern] = useState(true);
+    const [showModern, setShowModern] = useState(false);
     const [filterItemName, setFilterItemName] = useState('');
     const [filterYear, setFilterYear] = useState('');
     const [filterSetCode, setFilterSetCode] = useState('');
