@@ -42,7 +42,7 @@ const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear,
                 onClick={ (e) => { !e.target.classList.contains('button') && showModal(true, item) } }
             >
               <div className='card-preview-image-container'>
-                <img alt={ item.name } className='card-preview-image' src={ `/catalog_images/${[item.id]}.png` }/>
+                <img alt={ item.name } className='card-preview-image' src={ `catalog_images/${[item.id]}.png` }/>
               </div>
               { item.checked === 'false' && <div
                   className='button button-check'

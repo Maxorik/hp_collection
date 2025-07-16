@@ -23,7 +23,7 @@ function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
       >
           <Box className="modal-window">
               <div className='card-in-modal'>
-                 <img alt={ selectedCard.name } className='card-modal-image' src={ `/catalog_images/${[selectedCard.id]}.png` }/>
+                 <img alt={ selectedCard.name } className='card-modal-image' src={ `catalog_images/${[selectedCard.id]}.png` }/>
               </div>
               <div className='modal-card-name'>{ selectedCard.name }</div>
               <div className='modal-card-info'>

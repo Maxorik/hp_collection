@@ -5,7 +5,7 @@ const Header = observer(({ showModern }) => {
   return (
     <div className="header">
         <div className='collection-info-header'>
-            <img src='/img/title2.png' className='header-logo-title-img' />
+            <img src='img/title2.png' className='header-logo-title-img' />
             <p className='header-text'>{ showModern ? collection.checkedItemsModern : collection.checkedItems  }</p>
         </div>
     </div>

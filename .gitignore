@@ -1,9 +1,10 @@
 # dependencies
 /node_modules
 /assets
-/build
 /src/store/config.js
+/build
 .idea
 *.bak
 /html-parser/brickset.html
 /html-parser/init_data.html
+package-lock.json
