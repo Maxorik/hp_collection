@@ -1,12 +1,14 @@
 {
   "name": "lego-collection",
   "version": "0.1.0",
-  "private": true,
   "homepage": "./",
+  "author": "maxorik",
+  "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.3",
+    "@vitejs/plugin-react": "^4.7.0",
     "axios": "^1.5.1",
     "mobx": "^6.10.2",
     "mobx-react-lite": "^4.0.5",
@@ -15,8 +17,8 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "cross-env BUILD_PATH=docs react-scripts build"
+    "dev": "vite",
+    "build": "vite build && copy CNAME docs\\ && git add docs"
   },
   "eslintConfig": {
     "extends": [
@@ -24,19 +26,7 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "vite": "^7.0.6"
   }
 }
