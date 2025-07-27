@@ -13,7 +13,8 @@ class Collection {
         const localCollection = localStorage.getItem('hp_collection') ? JSON.parse(localStorage.getItem('hp_collection')) : [];
 
         /** отображаем только новые наборы */
-        this.collectionList = catalog.filter(item => item.id.match(/hp\d+/)).sort((a, b) => a.id > b.id ? -1 : 1);
+        this.collectionList = catalog.filter(item => item.id.match(/hp\d+/))
+            .sort((a, b) => a.id > b.id ? -1 : 1);
 
         /** запрашиваем отмеченные фигурки */
         this.collectionList = this.collectionList.map(item => {
@@ -49,13 +50,28 @@ class Collection {
         localStorage.setItem('hp_collection', JSON.stringify(collection));
     }
 
-    /** Сбросить локальный стор */
+    /** Сбросить локальный стор DEPRECATED*/
     resetLocalStorage() {
         this.collectionList = this.collectionList.map(item => {
             return { ...item, checked: 'false' }
         })
 
         this.updateLocalStorage();
+    }
+
+    /** Получить табличный вид фигурок */
+    get tableFigureList() {
+        const unicNames = new Map();
+        this.collectionList.map(item => {
+            if (!unicNames.has(item.name)) {
+                unicNames.set(item.name, { name: item.name, count: 1, photo: `catalog_images/${item.id}.png`, checked: item.checked === 'true' ? 1 : 0 });
+            } else {
+                const prev = unicNames.get(item.name);
+                unicNames.set(item.name, { name: prev.name, count: prev.count + 1, photo: prev.photo, checked: item.checked === 'true' ? prev.checked + 1 : prev.checked });
+            }
+        })
+
+        return Array.from(unicNames.values()).sort((a, b) => a.name > b.name ? 1 : -1);
     }
 }
 

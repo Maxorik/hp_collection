@@ -5,7 +5,7 @@ import { locale, lang } from '../store/locale'
 import Card from "./Card";
 import '../style/index.css'
 
-const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear, filterSetCode }) => {
+const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear, filterSetCode, viewType }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
@@ -32,34 +32,48 @@ const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear,
     return nameMatched && setCodeMatched && yearMatched && onlyChecked && onlyModern;
   }
 
+  function showRow(item) {
+    return filterItemName === '' || item.name.toLowerCase().includes(filterItemName.toLowerCase());
+  }
+
   return (
       <div className='collection-body'>
-        <div className="card-grid">
-          { collection.collectionList.map((item) => {
-            return setVisible(item) && <div
-                className={ `card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}` }
-                key={ item.id }
-                onClick={ (e) => { !e.target.classList.contains('button') && showModal(true, item) } }
-            >
-              <div className='card-preview-image-container'>
-                <img alt={ item.name } className='card-preview-image' src={ `catalog_images/${[item.id]}.png` }/>
-              </div>
-              { item.checked === 'false' && <div
-                  className='button button-check'
-                  id={ item.id }
-                  onClick={ () => checkItem(item.id, true) }>
-                { lang[locale].addBtn }
-              </div> }
-            </div>
-          } ) }
+        {viewType === 'grid' ?
+            <div className="card-grid">
+              {collection.collectionList.map((item) => {
+                return setVisible(item) && <div
+                    className={`card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}`}
+                    key={item.id}
+                    onClick={(e) => {
+                      !e.target.classList.contains('button') && showModal(true, item)
+                    }}
+                >
+                  <div className='card-preview-image-container'>
+                    <img alt={item.name} className='card-preview-image' src={`catalog_images/${[item.id]}.png`}/>
+                  </div>
+                  {item.checked === 'false' && <div
+                      className='button button-check'
+                      id={item.id}
+                      onClick={() => checkItem(item.id, true)}>
+                    {lang[locale].addBtn}
+                  </div>}
+                </div>
+              })}
 
-          { showCard === true && <Card
-              modal = { showCard }
-              selectedCard = { selectedCard }
-              showModal = { showModal }
-              onClickCheckBtn = { checkItem }
-          /> }
-        </div>
+              {showCard === true && <Card
+                  modal={showCard}
+                  selectedCard={selectedCard}
+                  showModal={showModal}
+                  onClickCheckBtn={checkItem}
+              />}
+            </div> : <div className="card-row">
+              { collection.tableFigureList.map((item, index) => showRow(item) && <div className='figure-row' key={item.id}>
+                <p style={{ width: 32 }} >{ `${index + 1}.` }</p>
+                <p style={{ width: 220 }}>{ item.name }</p>
+                <p>{ `${item.checked} / ${item.count} ` }</p>
+              </div>) }
+            </div>
+        }
       </div>
   )
 })

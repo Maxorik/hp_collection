@@ -9,6 +9,7 @@ function App() {
     const [filterItemName, setFilterItemName] = useState('');
     const [filterYear, setFilterYear] = useState('');
     const [filterSetCode, setFilterSetCode] = useState('');
+    const [viewType, setViewType] = useState('grid');
 
     /** Чекбокс "показывать имеющиеся в коллекции" */
     const setVisibleCheckedItems = (state) => {
@@ -35,6 +36,12 @@ function App() {
         setFilterSetCode(event.target.value || '');
     }
 
+    /** Вид отображения строки \ карточки */
+    const setView = (type) => {
+        console.log(type)
+        setViewType(type || 'grid');
+    }
+
     return (
         <>
             <Header
@@ -46,18 +53,20 @@ function App() {
                 filterItemName = { filterItemName }
                 filterYear = { filterYear }
                 filterSetCode = { filterSetCode }
+                viewType = { viewType }
             />
             <Footer
                 setFilteredItemName = { setFilteredItemName }
                 filterItemName = { filterItemName }
-                setVisibleCheckedItems = { setVisibleCheckedItems }
-                showChecked = { showChecked }
+                // setVisibleCheckedItems = { setVisibleCheckedItems }
+                // showChecked = { showChecked }
                 filterYear = { filterYear }
                 setFilteredYear = { setFilteredYear }
                 filterSetCode = { filterSetCode }
                 setFilteredSetCode = { setFilteredSetCode }
                 showModern = { showModern }
                 setVisibleModernItems = { setVisibleModernItems }
+                setView = { setView }
             />
         </>
     );

@@ -292,7 +292,6 @@ a {
   padding: 2px 5px;
   border-radius: 6px 6px 0 0;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
-  /*background: #fff;*/
   background-color: rgb(255, 213, 2);
   z-index: 10;
 }
@@ -314,7 +313,7 @@ a {
 .footer-opener.up {
   background-image: url('../../public/img/filter.png');
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
-  background-color: #51497c;
+  background-color: rgb(255, 213, 2);
   background-size: 60%;
 }
 
@@ -367,7 +366,7 @@ a {
   background-position: center;
   background-size: contain;
   background-image: url('../../public/img/trash.svg');
-  background-color: #8f87b7;
+  background-color: #ed9205;
 }
 
 input[type="checkbox"] {
@@ -432,7 +431,7 @@ input[type="checkbox"] {
 }
 
 .checkbox:checked + .checkbox-label {
-  background-color: #8f87b7;
+  background-color: #ed9205;
 }
 
 .checkbox:checked + .checkbox-label:before {
@@ -454,4 +453,48 @@ input[type="checkbox"] {
   width: 50px;
   text-align: right;
   line-height: 25px;
+}
+
+.view-interface-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.view-interface-container-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.set-view-btn {
+  width: 27px;
+  height: 27px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #ed9205;
+}
+
+.filter-name-clean-btn:hover, .set-view-btn:hover {
+  background-color: #fff;
+}
+
+.btn-grid {
+  background-image: url('../../public/img/view-grid.svg');
+}
+.btn-row {
+  background-image: url('../../public/img/view-rows.svg');
+}
+.card-row {
+  padding: 0 10px;
+  width: 800px;
+  margin: 0 auto;
+}
+.figure-row {
+  display: flex;
+  gap: 8px;
 }

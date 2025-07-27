@@ -1,10 +1,9 @@
-import {observer} from "mobx-react-lite";
-import {useState} from "react";
-import collection from "../store/store";
+import { observer } from "mobx-react-lite";
+import { useState } from "react";
 import { locale, lang } from '../store/locale'
 
-const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemName,
-    filterItemName, setFilteredYear, filterYear, filterSetCode, setFilteredSetCode, showModern, setVisibleModernItems }) => {
+const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode,
+         setFilteredSetCode, showModern, setVisibleModernItems, setView }) => {
     const [filtersClassList, setFiltersClassList] = useState('footer-filters hidden-content');
     const [footerOpenerClassList, setFooterOpenerClassList] = useState('footer-opener up');
 
@@ -80,15 +79,15 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                         {/*    <p>{ lang[locale].showCheckedTip }</p>*/}
                         {/*</div>*/}
                         <div className='filter-checkbox-container'>
+                            <p>{lang[locale].showOnlynewTip}</p>
                             <input
                                 type='checkbox'
-                                checked={ showModern }
-                                onChange={ (e) => setVisibleModernItems(e.target.checked) }
+                                checked={showModern}
+                                onChange={(e) => setVisibleModernItems(e.target.checked)}
                                 className='checkbox'
                                 id='show-modern-checkbox'
                             />
                             <label htmlFor="show-modern-checkbox" className="checkbox-label"/>
-                            <p>{ lang[locale].showOnlynewTip }</p>
                         </div>
                     </div>
 
@@ -99,10 +98,24 @@ const Footer = observer(({ setVisibleCheckedItems, showChecked, setFilteredItemN
                     {/*>*/}
                     {/*    { lang[locale].discardBtn }*/}
                     {/*</button>*/}
+
+                    <div className='view-interface-container'>
+                        <p className='footer-text footer-input-title-left'>{lang[locale].view}</p>
+                        <div className='view-interface-container-buttons'>
+                            <div
+                                className='set-view-btn btn-grid'
+                                onClick={() => setView('grid')}
+                            />
+                            <div
+                                className='set-view-btn btn-row'
+                                onClick={() => setView('row')}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </>
+        </>
     );
 })
 

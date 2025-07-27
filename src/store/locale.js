@@ -22,7 +22,8 @@ const lang = {
         inCollection: 'В коллекции',
         yes: 'Да',
         no: 'Нет',
-        searchTitle: 'Поиск по коллекции'
+        searchTitle: 'Поиск по коллекции',
+        view: 'Вид'
     },
     en: {
         filterName: 'Search by name',
@@ -45,7 +46,8 @@ const lang = {
         yes: 'Yes',
         no: 'No',
         nonameFigure: 'Stranger',
-        searchTitle: 'Search by collection'
+        searchTitle: 'Search by collection',
+        view: 'View'
     }
 }
 
