@@ -6,6 +6,6 @@
 .idea
 *.bak
 /utils/html-parser/brickset.html
-/utils/scripts/no-background
-/utils/scripts/compressed
+/utils/scripts/*
 package-lock.json
+CNAME

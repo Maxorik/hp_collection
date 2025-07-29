@@ -4,7 +4,7 @@ from rembg import remove
 from PIL import Image
 import os
 
-input_folder = "../../public/catalog_images"
+input_folder = "new"
 output_folder = "no-background"
 os.makedirs(output_folder, exist_ok=True)
 
