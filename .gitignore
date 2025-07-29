@@ -5,6 +5,7 @@
 /build
 .idea
 *.bak
-/html-parser/brickset.html
-/html-parser/init_data.html
+/utils/html-parser/brickset.html
+/utils/scripts/no-background
+/utils/scripts/compressed
 package-lock.json
