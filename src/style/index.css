@@ -138,29 +138,19 @@ a {
   opacity: 0.5;
 }
 
-.modal-window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  min-height: 545px;
-  background-color: #fff;
-  border: 2px solid #51497c;
-  padding: 4px;
-  border-radius: 6px;
-}
-
 .card-in-modal {
   width: 250px;
   height: 100%;
   margin: 0 auto;
+  display: flex;
+  clip-path: polygon(-35% 47%, 50% -6%, 139% 49%, 3% 250%, 0% 100%);
+  background-color: #ffeebe;
 }
 
 .card-modal-image {
   width: auto;
   height: 250px;
-  margin: 60px 0 0 45px;
+  margin: 60px auto 0;
 }
 
 .card-in-modal::before {
@@ -176,8 +166,8 @@ a {
 }
 
 .modal-card-name {
-  width: 200px;
-  max-width: 200px;
+  width: 211px;
+  max-width: 211px;
   background-color: #af7306;
   border: 2px solid #fdcc55;
   color: #efd994;
@@ -188,45 +178,11 @@ a {
   position: absolute;
   z-index: 4;
   text-shadow: -1px 0 #4b1b00, 0 1px #4b1b00, 1px 0 #4b1b00, 0 -1px #4b1b00;
-  top: 59%;
-  left: 52%;
+  top: 60%;
+  left: 50.5%;
   margin-left: -107px;
   font-family: "HP2";
   font-size: 32px;
-}
-
-.modal-card-info {
-  position: absolute;
-  z-index: 5;
-  display: flex;
-  justify-content: space-between;
-  left: 50%;
-  margin: 65px auto 0 -95px;
-  width: auto;
-  color: #af7306;
-  font-weight: bold;
-  font-family: "VT323", monospace;
-  line-height: 36px;
-  white-space: nowrap;
-}
-
-.modal-footer {
-  margin-top: 185px;
-  width: 100%;
-  justify-content: right;
-  display: flex;
-}
-
-.modal-card-info-param-value {
-  margin-left: 10px;
-}
-
-.checked-title {
-  color: rgba(20, 58, 0, 0.65);
-}
-
-.unchecked-title {
-  color: rgba(241, 0, 0, 0.53);
 }
 
 .mr-8 {
@@ -252,10 +208,6 @@ a {
 .header-text {
   font-size: 22px;
   font-family: "HP2";
-}
-
-.card-set-href {
-  margin-right: 8px;
 }
 
 .collection-info-header {
@@ -496,4 +448,105 @@ input[type="checkbox"] {
 .figure-row {
   display: flex;
   gap: 8px;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 380px;
+  min-height: 545px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: rgb(255, 213, 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2e2828;
+}
+
+.modal-close:hover, .collection-btn:hover {
+  background-color: #ed9205;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 250px;
+  margin: auto;
+  width: fit-content;
+}
+
+.tags-container a {
+  color: #ed9205;
+  cursor: pointer;
+}
+
+.top-small { margin-top: 48px }
+.top-medium { margin-top: 65px }
+
+.card-tag {
+  width: max-content;
+  padding: 5px 12px;
+  border-radius: 15px;
+  line-height: 12px;
+  text-align: center;
+  color: rgb(221, 211, 238);
+  background-color: #51497c;
+  z-index: 4;
+  white-space: nowrap;
+  display: flex;
+  gap: 5px;
+  -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
+}
+
+.tag-icon {
+  background-image: url('../../public/img/lego.svg');
+  width: 16px;
+  height: 16px;
+}
+
+.collection-btn {
+  position: relative;
+  width: 210px;
+  background-color: rgb(255, 213, 2);
+  color: #2e2828;
+  line-height: 28px;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 2px;
+  text-align: center;
+  font-family: "HP2";
+  font-size: 32px;
+  z-index: 4;
+  user-select: none;
+  -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
 }

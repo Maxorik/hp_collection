@@ -28,17 +28,11 @@
   .collection-body {
     margin-top: 80px;
   }
-  .modal-window {
+  .modal-content {
     width: 97%;
   }
   .modal-card-name {
     top: 60.5%;
-  }
-  .modal-card-info {
-    margin-top: 80px;
-  }
-  .modal-footer {
-    margin-top: 200px;
   }
   .footer {
     bottom: -14px;

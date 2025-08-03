@@ -1,67 +1,53 @@
-import { Box, Button, Modal } from "@mui/material";
 import { locale, lang } from '../store/locale'
+import {useState} from "react";
 
 function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
-    /** ссылка на набор */
-    const getSetsCode = (setCode) => {
-        setCode.split(' ').map((set) => {
-            return (`<a target='_blank' href={ getHref(set) }>{ set }</a>`)
-        })
-        console.log(setCode.split(' '))
-    }
+    const [isChecked, setChecked] = useState(selectedCard.checked === 'true')
 
     const getHref = (href) => {
-        const parsedHrefCode = href.match(/\d+/)[0];
+        const parsedHrefCode = href.match(/\d+/) ? href.match(/\d+/)[0] : '';
         return `https://www.lego.com/en-us/service/buildinginstructions/${parsedHrefCode}`;
     }
 
+    const tagsClassname = (cardName) => {
+        return cardName.length > 20 ? 'tags-container top-medium' : 'tags-container top-small'
+    }
+
+    const onClickCheckButton = () => {
+        onClickCheckBtn(selectedCard.id, !isChecked);
+        setChecked(!isChecked)
+    }
+
     return (
-      <Modal
-          open={ modal }
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-      >
-          <Box className="modal-window">
-              <div className='card-in-modal'>
-                 <img alt={ selectedCard.name } className='card-modal-image' src={ `catalog_images/${[selectedCard.id]}.png` }/>
-              </div>
-              <div className='modal-card-name'>{ selectedCard.name }</div>
-              <div className='modal-card-info'>
-                <div className='modal-card-info-param-name'>
-                    <p>{ lang[locale].year }:</p><p>{ lang[locale].includeIn }:</p><p>{ lang[locale].inCollection }:</p>
+        <div>
+            {modal && (
+                <div className="modal" onClick={() => showModal(false)}>
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close" onClick={() => showModal(false)}>&times;</button>
+                        <div className='card-in-modal'>
+                            <img alt={selectedCard.name} className='card-modal-image'
+                                 src={`catalog_images/${[selectedCard.id]}.png`}/>
+                        </div>
+                        <div className='modal-card-name'>{selectedCard.name}</div>
+                        <div className={tagsClassname(selectedCard.name)}>
+                            <div className='card-tag'>{isChecked ? '✔️' : '❌'}</div>
+                            <div className='card-tag'>{selectedCard.year}</div>
+                            {selectedCard.setCode.split(' ').map((setCode) => {
+                                return setCode ? <div className='card-tag' key={setCode}>
+                                    <div className='tag-icon'></div>
+                                    <a target='_blank' rel="noreferrer" href={getHref(setCode)}>{setCode}</a>
+                                </div> : <div style={{width: 20}} key={setCode}></div>
+                            })}
+                        </div>
+                        <div className='collection-btn' onClick={onClickCheckButton}>
+                            {isChecked ?
+                                <span className='checked-title'>{lang[locale].removeBtn}</span> :
+                                <span className='unchecked-title'>{lang[locale].addBtn}</span>}
+                        </div>
+                    </div>
                 </div>
-                  <div className='modal-card-info-param-value'>
-                      <p>{ selectedCard.year }</p>
-                      <span className='card-sets-container'> {
-                        selectedCard.setCode.split(' ').map((setCode) => {
-                            return <a className='card-set-href' key={setCode} target='_blank' href={getHref(setCode)}>{setCode}</a>
-                        })}
-                      </span>
-                      <p>{ selectedCard.checked === 'true' ? <span className='checked-title'>{ lang[locale].yes }</span> :
-                          <span className='unchecked-title'>{ lang[locale].no }</span> }</p>
-                  </div>
-              </div>
-              <div className="modal-footer">
-                  { selectedCard.checked === 'false' ? <Button
-                      className='mr-8 button'
-                      variant="outlined"
-                      onClick={() => onClickCheckBtn(selectedCard.id, true)}>
-                      { lang[locale].addBtn }
-                  </Button> : <Button
-                      className='mr-8 button'
-                      variant="outlined"
-                      onClick={() => onClickCheckBtn(selectedCard.id, false)}>
-                      { lang[locale].removeBtn }
-                  </Button> }
-                  <Button
-                      className='mr-8 button'
-                      variant="outlined"
-                      onClick={ () => showModal(false) }>
-                      { lang[locale].closeBtn }
-                  </Button>
-              </div>
-          </Box>
-      </Modal>
+            )}
+        </div>
     );
 }
 
