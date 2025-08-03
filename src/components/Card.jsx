@@ -30,7 +30,7 @@ function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
                         </div>
                         <div className='modal-card-name'>{selectedCard.name}</div>
                         <div className={tagsClassname(selectedCard.name)}>
-                            <div className='card-tag'>{isChecked ? '✔️' : '❌'}</div>
+                            <div className='card-tag'>{isChecked ? <span className='green-check'>&#10004;</span> : '❌'}</div>
                             <div className='card-tag'>{selectedCard.year}</div>
                             {selectedCard.setCode.split(' ').map((setCode) => {
                                 return setCode ? <div className='card-tag' key={setCode}>

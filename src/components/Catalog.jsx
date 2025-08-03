@@ -55,7 +55,7 @@ const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear,
                       className='button button-check'
                       id={item.id}
                       onClick={() => checkItem(item.id, true)}>
-                    {lang[locale].addBtn}
+                    {lang[locale].addBtnMini}
                   </div>}
                 </div>
               })}

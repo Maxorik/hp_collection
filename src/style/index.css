@@ -520,6 +520,7 @@ input[type="checkbox"] {
   z-index: 4;
   white-space: nowrap;
   display: flex;
+  align-items: center;
   gap: 5px;
   -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
@@ -549,4 +550,7 @@ input[type="checkbox"] {
   -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
   box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
+}
+.green-check {
+  color: #19e600;
 }
