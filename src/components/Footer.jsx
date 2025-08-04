@@ -1,23 +1,41 @@
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
+import clsx from "clsx";
 import { locale, lang } from '../store/locale'
 
-const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode,
-         setFilteredSetCode, showModern, setVisibleModernItems, setView }) => {
-    const [filtersClassList, setFiltersClassList] = useState('footer-filters hidden-content');
-    const [footerOpenerClassList, setFooterOpenerClassList] = useState('footer-opener up');
+const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode, setFilteredSetCode, setView }) => {
+    const [hiddenClass, setHiddenClass] = useState('hidden-content');
+    const [footerOpenerClassList, setFooterOpenerClassList] = useState('up');
+    const [cleanerClassList, setCleanerOpenerClassList] = useState('shadow');
+    const [showCleanBtn, setShowCleanBtn] = useState(false);
 
-    // FIXME !
+    /** событие при филтрации */
+    const onFilter = (event, callback, discard=false) => {
+        callback(event);
+        setShowCleanBtn(!discard);
+    }
+
+    /** нажатие на основную кнопку метелки */
+    const onCleanAllFilters = () => {
+        setFilteredSetCode(null);
+        setFilteredYear(null);
+        setFilteredItemName(null);
+        setShowCleanBtn(false);
+    }
+
+    /** нажатие на кнопку лупы */
     const filterVisibilityToggle = () => {
-        filtersClassList.indexOf('hidden-content') > -1 ? setFiltersClassList('footer-filters') : setFiltersClassList('footer-filters hidden-content');
-        footerOpenerClassList.indexOf('up') > -1 ? setFooterOpenerClassList('footer-opener down') : setFooterOpenerClassList('footer-opener up');
+        setHiddenClass(prev => prev === 'hidden-content' ? '' : 'hidden-content');
+        setFooterOpenerClassList(prev => prev === 'up' ? 'down' : 'up');
+        setCleanerOpenerClassList(hiddenClass === 'hidden-content' ? '' : 'shadow');
     }
 
     return ( <>
         <div className="footer-gradient"/>
         <div className="footer">
-            <div className={ footerOpenerClassList } onClick={ () => filterVisibilityToggle() }/>
-            <div className={ filtersClassList }>
+            <div className={ clsx('footer-opener footer-btn', footerOpenerClassList) } onClick={ filterVisibilityToggle }/>
+            {showCleanBtn && <div className={clsx('footer-btn footer-clean-btn', cleanerClassList)} onClick={ onCleanAllFilters }/>}
+            <div className={ clsx('footer-filters', hiddenClass) }>
                 <div className='footer-filters-content'>
                     <p className='footer-text'>{ lang[locale].searchTitle }</p><br />
                     <div className='input-container'>
@@ -26,46 +44,44 @@ const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear,
                             type='text'
                             className='filter-input'
                             value={filterItemName}
-                            // placeholder={lang[locale].nameTip}
-                            onChange={(e) => setFilteredItemName(e)}
+                            onChange={(e) => onFilter(e, setFilteredItemName)}
                         />
                         <div
                             className='filter-name-clean-btn'
-                            onClick={(e) => setFilteredItemName(e)}
+                            onClick={(e) => onFilter(e, setFilteredItemName, true)}
                         />
                     </div>
 
                     <div className='input-container'>
                         <p className='footer-text footer-input-title-left'>{lang[locale].year}</p>
                         <input
-                            type='text'
+                            type='number'
                             className='filter-input'
                             value={filterYear}
-                            // placeholder={lang[locale].yearTip}
-                            onChange={(e) => setFilteredYear(e)}
+                            onChange={(e) => onFilter(e, setFilteredYear)}
                         />
                         <div
                             className='filter-name-clean-btn'
-                            onClick={(e) => setFilteredYear(e)}
+                            onClick={(e) => onFilter(e, setFilteredYear, true)}
                         />
                     </div>
 
                     <div className='input-container'>
                         <p className='footer-text footer-input-title-left'>{lang[locale].set}</p>
                         <input
-                            type='text'
+                            type='number'
                             className='filter-input'
                             value={filterSetCode}
-                            // placeholder={lang[locale].codeTip}
-                            onChange={(e) => setFilteredSetCode(e)}
+                            onChange={(e) => onFilter(e, setFilteredSetCode)}
                         />
                         <div
                             className='filter-name-clean-btn'
-                            onClick={(e) => setFilteredSetCode(e)}
+                            onClick={(e) => onFilter(e, setFilteredSetCode, true)}
                         />
                     </div>
 
-                    <div className='filter-all-checkbox-container'>
+                    {/** DEPRECATED */}
+                    {/*<div className='filter-all-checkbox-container'>*/}
                         {/* чекбокс "показывать отмеченные" */}
                         {/*<div className='filter-checkbox-container'>*/}
                         {/*    <input*/}
@@ -78,19 +94,19 @@ const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear,
                         {/*    <label htmlFor="show-checked-checkbox" className="checkbox-label"/>*/}
                         {/*    <p>{ lang[locale].showCheckedTip }</p>*/}
                         {/*</div>*/}
-                        <div className='filter-checkbox-container'>
-                            <p>{lang[locale].showOnlynewTip}</p>
-                            <input
-                                type='checkbox'
-                                checked={showModern}
-                                onChange={(e) => setVisibleModernItems(e.target.checked)}
-                                className='checkbox'
-                                id='show-modern-checkbox'
-                            />
-                            <label htmlFor="show-modern-checkbox" className="checkbox-label"/>
-                        </div>
-                    </div>
-
+                        {/* чекбокс "показывать только 2018+" */}
+                        {/*<div className='filter-checkbox-container'>*/}
+                        {/*    <p>{lang[locale].showOnlynewTip}</p>*/}
+                        {/*    <input*/}
+                        {/*        type='checkbox'*/}
+                        {/*        checked={showModern}*/}
+                        {/*        onChange={(e) => setVisibleModernItems(e.target.checked)}*/}
+                        {/*        className='checkbox'*/}
+                        {/*        id='show-modern-checkbox'*/}
+                        {/*    />*/}
+                        {/*    <label htmlFor="show-modern-checkbox" className="checkbox-label"/>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
                     {/* сброс коллекции */}
                     {/*<button*/}
                     {/*    className='filter-reset-btn'*/}
@@ -102,14 +118,8 @@ const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear,
                     <div className='view-interface-container'>
                         <p className='footer-text footer-input-title-left'>{lang[locale].view}</p>
                         <div className='view-interface-container-buttons'>
-                            <div
-                                className='set-view-btn btn-grid'
-                                onClick={() => setView('grid')}
-                            />
-                            <div
-                                className='set-view-btn btn-row'
-                                onClick={() => setView('row')}
-                            />
+                            <div className='set-view-btn btn-grid' onClick={() => setView('grid')}/>
+                            <div className='set-view-btn btn-row' onClick={() => setView('row')}/>
                         </div>
                     </div>
                 </div>

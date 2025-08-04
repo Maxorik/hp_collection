@@ -23,17 +23,17 @@ function App() {
 
     /** Фильтр по имени */
     const setFilteredItemName = (event) => {
-        setFilterItemName(event.target.value || '');
+        setFilterItemName(event?.target.value || '');
     }
 
     /** Фильтр по году */
     const setFilteredYear = (event) => {
-        setFilterYear(event.target.value || '');
+        setFilterYear(event?.target.value || '');
     }
 
     /** Фильтр по коду набора */
     const setFilteredSetCode = (event) => {
-        setFilterSetCode(event.target.value || '');
+        setFilterSetCode(event?.target.value || '');
     }
 
     /** Вид отображения строки \ карточки */

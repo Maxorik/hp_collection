@@ -36,6 +36,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -248,18 +257,21 @@ a {
   z-index: 10;
 }
 
-.footer-opener {
+.footer-btn {
   width: 60px;
   height: 60px;
   border-radius: 100%;
   position: absolute;
-  right: 10px;
-  bottom: 24px;
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   color: transparent;
+}
+
+.footer-opener {
+  right: 10px;
+  bottom: 24px;
 }
 
 .footer-opener.up {
@@ -272,6 +284,18 @@ a {
 .footer-opener.down {
   background-image: url('../../public/img/arrow_down.svg');
   fill: #51497c;
+}
+
+.footer-clean-btn {
+  right: 74px;
+  bottom: 24px;
+  background-image: url('../../public/img/clean.svg');
+  background-color: rgb(255, 213, 2);
+  background-size: 60%;
+}
+
+.shadow {
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .footer-filters {
@@ -317,7 +341,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url('../../public/img/trash.svg');
+  background-image: url('../../public/img/clean.svg');
   background-color: #ed9205;
 }
 
@@ -410,7 +434,7 @@ input[type="checkbox"] {
 .view-interface-container {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 
 .view-interface-container-buttons {
