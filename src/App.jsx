@@ -10,6 +10,7 @@ function App() {
     const [filterYear, setFilterYear] = useState('');
     const [filterSetCode, setFilterSetCode] = useState('');
     const [viewType, setViewType] = useState('grid');
+    const [showCleanBtn, setShowCleanBtn] = useState(false);
 
     /** Чекбокс "показывать имеющиеся в коллекции" */
     const setVisibleCheckedItems = (state) => {
@@ -22,23 +23,24 @@ function App() {
     }
 
     /** Фильтр по имени */
-    const setFilteredItemName = (event) => {
-        setFilterItemName(event?.target.value || '');
+    const setFilteredItemName = (value) => {
+        setFilterItemName(value || '');
     }
 
     /** Фильтр по году */
-    const setFilteredYear = (event) => {
-        setFilterYear(event?.target.value || '');
+    const setFilteredYear = (value) => {
+        setFilterYear(value || '');
     }
 
     /** Фильтр по коду набора */
-    const setFilteredSetCode = (event) => {
-        setFilterSetCode(event?.target.value || '');
+    const setFilteredSetCode = (value) => {
+        setFilterSetCode(value || '');
     }
 
-    /** Вид отображения строки \ карточки */
+    /** Вид отображения строки \ карточки
+     * type: grid | row
+     * */
     const setView = (type) => {
-        console.log(type)
         setViewType(type || 'grid');
     }
 
@@ -51,9 +53,12 @@ function App() {
                 showChecked = { showChecked }
                 showModern = { showModern }
                 filterItemName = { filterItemName }
+                setFilterItemName = { setFilterItemName }
                 filterYear = { filterYear }
                 filterSetCode = { filterSetCode }
                 viewType = { viewType }
+                setView = { setView }
+                setShowCleanBtn = { setShowCleanBtn }
             />
             <Footer
                 setFilteredItemName = { setFilteredItemName }
@@ -67,6 +72,8 @@ function App() {
                 showModern = { showModern }
                 setVisibleModernItems = { setVisibleModernItems }
                 setView = { setView }
+                showCleanBtn = { showCleanBtn }
+                setShowCleanBtn = { setShowCleanBtn }
             />
         </>
     );

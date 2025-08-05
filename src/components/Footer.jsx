@@ -3,15 +3,15 @@ import { useState } from "react";
 import clsx from "clsx";
 import { locale, lang } from '../store/locale'
 
-const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode, setFilteredSetCode, setView }) => {
+const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode,
+         setFilteredSetCode, setView, showCleanBtn, setShowCleanBtn }) => {
     const [hiddenClass, setHiddenClass] = useState('hidden-content');
     const [footerOpenerClassList, setFooterOpenerClassList] = useState('up');
     const [cleanerClassList, setCleanerOpenerClassList] = useState('shadow');
-    const [showCleanBtn, setShowCleanBtn] = useState(false);
 
     /** событие при филтрации */
     const onFilter = (event, callback, discard=false) => {
-        callback(event);
+        callback(event?.target.value);
         setShowCleanBtn(!discard);
     }
 

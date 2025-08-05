@@ -5,13 +5,20 @@ import { locale, lang } from '../store/locale'
 import Card from "./Card";
 import '../style/index.css'
 
-const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear, filterSetCode, viewType }) => {
+const Catalog = observer(({ showChecked, showModern, setFilterItemName, filterItemName, filterYear,
+            filterSetCode, setView, viewType, setShowCleanBtn }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
   const showModal = (state, card) => {
     setShowCard(state);
     card && setSelectedCard(card);
+  }
+
+  const onTableItemSelect = (itemName) => {
+    setFilterItemName(itemName);
+    setView('grid');
+    setShowCleanBtn(true);
   }
 
   useEffect(() => {
@@ -67,11 +74,12 @@ const Catalog = observer(({ showChecked, showModern, filterItemName, filterYear,
                   onClickCheckBtn={checkItem}
               />}
             </div> : <div className="card-row">
-              { collection.tableFigureList.map((item, index) => showRow(item) && <div className='figure-row' key={item.id}>
-                <p style={{ width: 32 }} >{ `${index + 1}.` }</p>
-                <p style={{ width: 220 }}>{ item.name }</p>
-                <p>{ `${item.checked} / ${item.count} ` }</p>
-              </div>) }
+              { collection.tableFigureList.map((item, index) => showRow(item) &&
+                  <div className='figure-row' key={item.id} onClick={() => onTableItemSelect(item.name)}>
+                    <p style={{ width: 32 }} >{ `${index + 1}.` }</p>
+                    <p className='table-item-name'>{ item.name }</p>
+                    <p>{ `${item.checked} / ${item.count} ` }</p>
+                  </div>) }
             </div>
         }
       </div>

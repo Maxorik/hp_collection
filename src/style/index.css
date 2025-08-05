@@ -466,12 +466,21 @@ input[type="checkbox"] {
   background-image: url('../../public/img/view-rows.svg');
 }
 .card-row {
-  padding: 10px;
+  padding: 10px 10px 100px;
+  width: 600px;
   margin: 0 auto;
+  cursor: pointer;
 }
 .figure-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
   gap: 8px;
+  border-bottom: 1px solid #2e2828;
+  padding: 4px 0;
+}
+
+.figure-row:nth-child(2n) {
+  background-color: #ffeebe;
 }
 
 .modal {
@@ -578,4 +587,8 @@ input[type="checkbox"] {
 }
 .green-check {
   color: #19e600;
+}
+.table-item-name {
+  width: 220px;
+  color: #51497c;
 }
