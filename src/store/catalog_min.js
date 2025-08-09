@@ -1,4 +1,60 @@
 const catalog = [{
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp569.png",
+    "name": "Neville Longbottom",
+    "id": "hp569",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76445-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp570.png",
+    "name": "Professor Pomona Sprout",
+    "id": "hp570",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76445-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp571.png",
+    "name": "Hermione Granger",
+    "id": "hp571",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76445-1"
+},{
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp572.png",
+    "name": "Florean Fortescue",
+    "id": "hp572",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76452-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp574.png",
+    "name": "Katie Bell",
+    "id": "hp574",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76452-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp575.png",
+    "name": "Alicia Spinnet",
+    "id": "hp575",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76452-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp576.png",
+    "name": "Cho Chang",
+    "id": "hp576",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76452-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp577.png",
+    "name": "Ron Weasley",
+    "id": "hp577",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76452-1"
+},{
     "img": "https://img.bricklink.com/itemimage/mn/0/hp526.png",
     "name": "Lucius Malfoy",
     "id": "hp526",

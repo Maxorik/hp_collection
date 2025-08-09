@@ -5,11 +5,11 @@
 
 Преимущество перед бриклинком и остальными - скорость работы приложения и точечная направленность на серию "Гарри Поттер". Никакая регистрация не требуется, рекламы нет.
 
-Информация о вашей коллекции хранится персонально на устройстве, на котором используется приложение. Пока что импортировать\экспортировать коллекцию нельзя. Если вам это нужно, дайте мне знать.
+Информация о вашей коллекции хранится персонально на устройстве, на котором используется приложение. После первой загрузки приложения его можно использовать офлайн (без подключения к интернету).
 
-В приложении есть фильтр по фигуркам, находится в правом нижнем углу. По умолчанию отображаются только фигурки, выпущенные с 2018 года. Если вам также интересны и старые фигурки, настройте это в фильтрах, переключив тумблер.
+В приложении есть фильтр по фигуркам, находится в правом нижнем углу. Также есть табличный список всех именных персонажей (кликабельный).
 
-Если вам понравилось приложение и вы хотели бы в нем что-то улучшить, напишите мне [в мой профиль Telegram](https://t.me/maxorik)
+Если вам понравилось приложение и вы хотели бы в нем что-то улучшить, напишите мне на почту [gfifful@gmail.com](mailto:gfifful@gmail.com)
 
 *********************************************************************************
 :zap:[Run app](https://maxorik.github.io/hp_collection/):zap:
@@ -18,8 +18,8 @@ Hi! This application is designed to keep track of the collection of lego minifig
 
 The advantage over bricklink and others - the speed of the application and a precise focus on the series of “Harry Potter”. No registration required, no advertising.
 
-Your collection information is stored personally on the device the app is used on. For now, you can't import/export your collection. If you need to do so, let me know.
+Information about your collection is stored personally on the device on which the application is used. After the first download of the application, it can be used offline (without an internet connection).
 
-There is a figurine filter in the app, located in the bottom right corner. By default, only figures released since 2018 are displayed. If you're also interested in older figures, customize that in the filters by toggling the toggle switch.
+The application has a filter for figures, located in the lower right corner. There is also a tabular list of all named characters (clickable).
 
-If you like the app and would like to improve something in it, message me [to Telegram](https://t.me/maxorik)
+If you like the app and would like to improve something in it, message me by email [gfifful@gmail.com](mailto:gfifful@gmail.com)

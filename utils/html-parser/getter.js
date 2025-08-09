@@ -57,7 +57,8 @@ const addItems = () => {
         </div>`
     );
 
-    res.innerHTML = `const catalog = [${htmlStrings1.join('')}]\n\n export default catalog;`;
+    // res.innerHTML = `const catalog = [${htmlStrings1.join('')}]\n\n export default catalog;`;  // FULL export
+    res.innerHTML = htmlStrings1.join('');
     console.log(catalog)
 }
 

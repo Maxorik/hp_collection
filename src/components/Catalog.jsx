@@ -45,6 +45,7 @@ const Catalog = observer(({ showChecked, showModern, setFilterItemName, filterIt
 
   return (
       <div className='collection-body'>
+        <div className='preload-image'><img alt='' src="../../public/img/card_back.png"/></div>
         {viewType === 'grid' ?
             <div className="card-grid">
               {collection.collectionList.map((item) => {
@@ -74,12 +75,12 @@ const Catalog = observer(({ showChecked, showModern, setFilterItemName, filterIt
                   onClickCheckBtn={checkItem}
               />}
             </div> : <div className="card-row">
-              { collection.tableFigureList.map((item, index) => showRow(item) &&
+              {collection.tableFigureList.map((item, index) => showRow(item) &&
                   <div className='figure-row' key={item.id} onClick={() => onTableItemSelect(item.name)}>
-                    <p style={{ width: 32 }} >{ `${index + 1}.` }</p>
-                    <p className='table-item-name'>{ item.name }</p>
-                    <p>{ `${item.checked} / ${item.count} ` }</p>
-                  </div>) }
+                    <p style={{width: 32}}>{`${index + 1}.`}</p>
+                    <p className='table-item-name'>{item.name}</p>
+                    <p>{`${item.checked} / ${item.count} `}</p>
+                  </div>)}
             </div>
         }
       </div>

@@ -57,6 +57,10 @@ a {
   color: rgba(14, 10, 255, 0.6);
 }
 
+.preload-image {
+  display: none;
+}
+
 .button {
   height: 40px;
   text-align: center;
@@ -144,7 +148,7 @@ a {
   height: 100%;
   background-color: #51497c;
   background-image: url("../../public/img/checked_back.png");
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 .card-in-modal {
