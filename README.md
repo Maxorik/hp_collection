@@ -23,3 +23,8 @@ Information about your collection is stored personally on the device on which th
 The application has a filter for figures, located in the lower right corner. There is also a tabular list of all named characters (clickable).
 
 If you like the app and would like to improve something in it, message me by email [gfifful@gmail.com](mailto:gfifful@gmail.com)
+
+*********************************************************************************
+![one.jpg](https://github.com/user-attachments/assets/235e342d-7109-4b5f-896d-b2a20c2d6a06)
+![two.jpg](https://github.com/user-attachments/assets/d546c0d4-d2aa-452e-816d-1b6495fcf8e2)
+![three.jpg](https://github.com/user-attachments/assets/f697acb4-b5bc-4321-bcf6-7061ddf00f8c)
