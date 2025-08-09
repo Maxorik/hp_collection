@@ -27,11 +27,9 @@ The application has a filter for figures, located in the lower right corner. The
 If you like the app and would like to improve something in it, message me by email [gfifful@gmail.com](mailto:gfifful@gmail.com)
 
 *********************************************************************************
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/0dfcad97-f178-4571-bf50-3644383e6132" alt="full-app" style="max-height:200px;"/>
-  <img src="https://github.com/user-attachments/assets/235e342d-7109-4b5f-896d-b2a20c2d6a06" alt="filtered" style="max-height:200px;"/>
-</p>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/d546c0d4-d2aa-452e-816d-1b6495fcf8e2" alt="target-card" style="max-height:200px;"/>
-  <img src="https://github.com/user-attachments/assets/f697acb4-b5bc-4321-bcf6-7061ddf00f8c" alt="table-view" style="max-height:200px;"/>
+<p align="center" style="max-height:200px;">
+  <img src="https://github.com/user-attachments/assets/0dfcad97-f178-4571-bf50-3644383e6132" alt="full-app"/>
+  <img src="https://github.com/user-attachments/assets/235e342d-7109-4b5f-896d-b2a20c2d6a06" alt="filtered"/>
+  <img src="https://github.com/user-attachments/assets/d546c0d4-d2aa-452e-816d-1b6495fcf8e2" alt="target-card"/>
+  <img src="https://github.com/user-attachments/assets/f697acb4-b5bc-4321-bcf6-7061ddf00f8c" alt="table-view"/>
 </p>
