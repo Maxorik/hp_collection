@@ -1,5 +1,7 @@
+WebApp: https://legohp.velumweb.ru
+
 ### The app is available in English! The English description is below :point_down:
-:zap:[Открыть приложение](https://maxorik.github.io/hp_collection/):zap:
+:zap:[Открыть приложение](https://legohp.velumweb.ru/):zap:
 
 Привет! Это приложение предназначено для учета коллекции минифигурок лего серии "Гарри Поттер". База минифигурок берется с **bricklink.com** и периодически обновляется.
 
@@ -12,7 +14,7 @@
 Если вам понравилось приложение и вы хотели бы в нем что-то улучшить, напишите мне на почту [gfifful@gmail.com](mailto:gfifful@gmail.com)
 
 *********************************************************************************
-:zap:[Run app](https://maxorik.github.io/hp_collection/):zap:
+:zap:[Run app](https://legohp.velumweb.ru/):zap:
 
 Hi! This application is designed to keep track of the collection of lego minifigures of the Harry Potter series. The database of minifigures is taken from **bricklink.com** and periodically updated.
 
@@ -25,6 +27,11 @@ The application has a filter for figures, located in the lower right corner. The
 If you like the app and would like to improve something in it, message me by email [gfifful@gmail.com](mailto:gfifful@gmail.com)
 
 *********************************************************************************
-![one.jpg](https://github.com/user-attachments/assets/235e342d-7109-4b5f-896d-b2a20c2d6a06)
-![two.jpg](https://github.com/user-attachments/assets/d546c0d4-d2aa-452e-816d-1b6495fcf8e2)
-![three.jpg](https://github.com/user-attachments/assets/f697acb4-b5bc-4321-bcf6-7061ddf00f8c)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0dfcad97-f178-4571-bf50-3644383e6132" alt="full-app"/>
+  <img src="https://github.com/user-attachments/assets/235e342d-7109-4b5f-896d-b2a20c2d6a06" alt="filtered"/>
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d546c0d4-d2aa-452e-816d-1b6495fcf8e2" alt="target-card" />
+  <img src="https://github.com/user-attachments/assets/f697acb4-b5bc-4321-bcf6-7061ddf00f8c" alt="table-view"/>
+</p>
