@@ -2223,7 +2223,7 @@ const catalog = [{
     "id": "hp242",
     "year": "2020",
     "checked": "false",
-    "setCode": "ISBN9780241409459-1"
+    "setCode": "Journal"
 }, {
     "img": "https://img.bricklink.com/itemimage/mn/0/hp243.png",
     "name": "Gilderoy Lockhart",
@@ -2307,7 +2307,7 @@ const catalog = [{
     "id": "hp254",
     "year": "2020",
     "checked": "false",
-    "setCode": "Harry Potter"
+    "setCode": "30677 75978 76395 76423 76428 76441 76447"
 }, {
     "img": "https://img.bricklink.com/itemimage/mn/0/hp255.png",
     "name": "Lucius Malfoy",
@@ -3007,7 +3007,7 @@ const catalog = [{
     "id": "hp094",
     "year": "2010",
     "checked": "false",
-    "setCode": "Gear Harry Potter"
+    "setCode": "4736 4738 4842 4865 4867 30111"
 }, {
     "img": "https://images.brickset.com/minifigs/large/hp095.jpg",
     "name": "Hermione Granger",
@@ -3651,7 +3651,7 @@ const catalog = [{
     "id": "hp005",
     "year": "2001",
     "checked": "false",
-    "setCode": ""
+    "setCode": "4702 4704 4711 4712 4729 4730 4733"
 }, {
     "img": "https://images.brickset.com/minifigs/large/hp006.jpg",
     "name": "Ron Weasley",
@@ -3665,7 +3665,7 @@ const catalog = [{
     "id": "hp007",
     "year": "2001",
     "checked": "false",
-    "setCode": ""
+    "setCode": "4704 4705 4706 4709 4730"
 }, {
     "img": "https://images.brickset.com/minifigs/large/hp008.jpg",
     "name": "Albus Dumbledore",
