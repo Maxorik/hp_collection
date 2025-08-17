@@ -1,4 +1,4 @@
-const catalog = [{
+const figures = [{
     "img": "https://img.bricklink.com/itemimage/mn/0/hp569.png",
     "name": "Neville Longbottom",
     "id": "hp569",
@@ -3794,4 +3794,4 @@ const catalog = [{
     "setCode": "5007615"
 }, ]
 
-export default catalog;
+export default figures;

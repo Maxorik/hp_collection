@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Header from './components/Header'
-import Catalog from './components/Catalog'
+import CatalogFigures from './components/CatalogFigures'
 import Footer from "./components/Footer";
 
 function App() {
@@ -49,7 +49,7 @@ function App() {
             <Header
                 showModern = { showModern }
             />
-            <Catalog
+            <CatalogFigures
                 showChecked = { showChecked }
                 showModern = { showModern }
                 filterItemName = { filterItemName }

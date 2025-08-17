@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import catalog from './catalog_min'
+import figures from './catalog_figures'
 
 class Collection {
     constructor() {
@@ -13,7 +13,7 @@ class Collection {
         const localCollection = localStorage.getItem('hp_collection') ? JSON.parse(localStorage.getItem('hp_collection')) : [];
 
         /** отображаем только новые наборы */
-        this.collectionList = catalog.filter(item => item.id.match(/hp\d+/))
+        this.collectionList = figures.filter(item => item.id.match(/hp\d+/))
             .sort((a, b) => a.id > b.id ? -1 : 1);
 
         /** запрашиваем отмеченные фигурки */

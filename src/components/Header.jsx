@@ -1,4 +1,4 @@
-import collection from "../store/store";
+import collection from "../store/store_figures";
 import {observer} from "mobx-react-lite";
 
 const Header = observer(({ showModern }) => {
