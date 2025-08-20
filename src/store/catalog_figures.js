@@ -3792,6 +3792,237 @@ const figures = [{
     "year": "2022",
     "checked": "false",
     "setCode": "5007615"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp01.png",
+    "name": "Harry Potter",
+    "id": "colhp01",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp02.png",
+    "name": "Hermione Granger",
+    "id": "colhp02",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp03.png",
+    "name": "Ron Weasley",
+    "id": "colhp03",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-3"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp04.png",
+    "name": "Draco Malfoy",
+    "id": "colhp04",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp05.png",
+    "name": "Luna Lovegood",
+    "id": "colhp05",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp06.png",
+    "name": "Neville Longbottom",
+    "id": "colhp06",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp07.png",
+    "name": "Cho Chang",
+    "id": "colhp07",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp08.png",
+    "name": "Dean Thomas",
+    "id": "colhp08",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp09.png",
+    "name": "Lord Voldemort",
+    "id": "colhp09",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp10.png",
+    "name": "Dobby",
+    "id": "colhp10",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp11.png",
+    "name": "Professor Sybill Trelawney",
+    "id": "colhp11",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp12.png",
+    "name": "Cedric Diggory",
+    "id": "colhp12",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp13.png",
+    "name": "Professor Filius Flitwick",
+    "id": "colhp13",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp14.png",
+    "name": "Alastor 'Mad-Eye' Moody",
+    "id": "colhp14",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp15.png",
+    "name": "Harry Potter",
+    "id": "colhp15",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp16.png",
+    "name": "Albus Dumbledore",
+    "id": "colhp16",
+    "year": "2018",
+    "checked": "false",
+    "setCode": "71022-23"
+},{
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp23.png",
+    "name": "Harry Potter",
+    "id": "colhp23",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp24.png",
+    "name": "Albus Dumbledore",
+    "id": "colhp24",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp25.png",
+    "name": "Hermione Granger",
+    "id": "colhp25",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp26.png",
+    "name": "Ron Weasley",
+    "id": "colhp26",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp27.png",
+    "name": "Luna Lovegood",
+    "id": "colhp27",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp28.png",
+    "name": "Griphook",
+    "id": "colhp28",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp29.png",
+    "name": "Lily Potter",
+    "id": "colhp29",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp30.png",
+    "name": "James Potter",
+    "id": "colhp30",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp31.png",
+    "name": "Ginny Weasley",
+    "id": "colhp31",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp32.png",
+    "name": "Fred Weasley",
+    "id": "colhp32",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp33.png",
+    "name": "George Weasley",
+    "id": "colhp33",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp34.png",
+    "name": "Bellatrix Lestrange",
+    "id": "colhp34",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp35.png",
+    "name": "Kingsley Shacklebolt",
+    "id": "colhp35",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp36.png",
+    "name": "Moaning Myrtle",
+    "id": "colhp36",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp37.png",
+    "name": "Professor Pomona Sprout",
+    "id": "colhp37",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp38.png",
+    "name": "Neville Longbottom",
+    "id": "colhp38",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/colhp39.png",
+    "name": "Harry Potter",
+    "id": "colhp39",
+    "year": "2020",
+    "checked": "false",
+    "setCode": "71028-17"
 }, ]
 
 export default figures;

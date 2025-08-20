@@ -3,7 +3,7 @@ import figures from './catalog_figures'
 
 class Collection {
     constructor() {
-        makeAutoObservable(this, {}, { deep:false }) // FIXME для "глубокмх" массивов (ключ = объект) использовать deep:true
+        makeAutoObservable(this, {}, { deep:false })
     }
 
     collectionList = [];
