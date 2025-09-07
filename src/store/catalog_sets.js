@@ -5,7 +5,7 @@ const sets = [{
     "year": "2025",
     "pieces": "2135",
     "minifigs": "12",
-    "type": "",         // advent || polybag
+    "type": "",         // advent || polybag || brickhead
     "reviews": [{
         "name": "",
         "link": ""

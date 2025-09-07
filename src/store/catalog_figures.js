@@ -1000,6 +1000,13 @@ const figures = [{
     "checked": "false",
     "setCode": "76423-1"
 }, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp442.png",
+    "name": "Rita Skeeter",
+    "id": "hp442",
+    "year": "2023",
+    "checked": "false",
+    "setCode": "journal"
+}, {
     "img": "https://img.bricklink.com/itemimage/mn/0/hp443.png",
     "name": "Harry Potter",
     "id": "hp443",
@@ -4023,6 +4030,6 @@ const figures = [{
     "year": "2020",
     "checked": "false",
     "setCode": "71028-17"
-}, ]
+} ]
 
 export default figures;
