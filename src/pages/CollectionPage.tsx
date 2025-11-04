@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-import Header from './components/Header'
-import CatalogFigures from './components/CatalogFigures'
-import Footer from "./components/Footer";
+import { Header, CatalogFigures, SearchPopup } from '../components'
 
-function App() {
+export function CollectionPage() {
     const [showChecked, setShowChecked] = useState(true);
     const [showModern, setShowModern] = useState(false);
     const [filterItemName, setFilterItemName] = useState('');
@@ -60,7 +58,7 @@ function App() {
                 setView = { setView }
                 setShowCleanBtn = { setShowCleanBtn }
             />
-            <Footer
+            <SearchPopup
                 setFilteredItemName = { setFilteredItemName }
                 filterItemName = { filterItemName }
                 // setVisibleCheckedItems = { setVisibleCheckedItems }
@@ -78,5 +76,3 @@ function App() {
         </>
     );
 }
-
-export default App;

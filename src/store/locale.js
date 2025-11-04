@@ -24,7 +24,9 @@ const lang = {
         yes: 'Да',
         no: 'Нет',
         searchTitle: 'Поиск по коллекции',
-        view: 'Вид'
+        view: 'Вид',
+        startBtn: 'Начнем!',
+        greetings: 'Похоже, вы запустили приложение в первый раз.\n\n• отмечайте полученные фигурки\n• составляйте вишлист\n• смотрите статистику коллекции'
     },
     en: {
         filterName: 'Search by name',
@@ -49,8 +51,15 @@ const lang = {
         no: 'No',
         nonameFigure: 'Stranger',
         searchTitle: 'Search by collection',
-        view: 'View'
+        view: 'View',
+        startBtn: 'Let\'s start!',
+        greetings: 'It looks like you\'ve launched the app for the first time.\n\n• mark the figures you\'ve received\n• create a wish list\n• view your collection statistics',
+        next: ''
     }
 }
 
 export { locale, lang };
+
+export function localize(text) {
+    return lang[locale][text];
+}

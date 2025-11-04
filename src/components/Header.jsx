@@ -1,7 +1,7 @@
 import collection from "../store/store_figures";
-import {observer} from "mobx-react-lite";
+import { observer } from "mobx-react-lite";
 
-const Header = observer(({ showModern }) => {
+export const Header = observer(({ showModern }) => {
   return (
     <div className="header">
         <div className='collection-info-header'>
@@ -11,5 +11,3 @@ const Header = observer(({ showModern }) => {
     </div>
   );
 })
-
-export default Header;

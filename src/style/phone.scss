@@ -31,6 +31,7 @@
   }
   .collection-body {
     margin-top: 80px;
+    width: auto;
   }
   .modal-content {
     width: 97%;
@@ -61,6 +62,16 @@
     position: fixed;
     height: 90vh;
     overflow: scroll;
+  }
+  .base-container {
+    width: auto;
+    max-width: min-content;
+  }
+  .start-preview-img {
+    width: 250px;
+  }
+  .break-line {
+    line-height: 1.2em;
   }
 }
 

@@ -1,7 +1,7 @@
 import { locale, lang } from '../store/locale'
-import {useState} from "react";
+import { useState } from "react";
 
-function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
+export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
     const [isChecked, setChecked] = useState(selectedCard.checked === 'true')
 
     const getHref = (href) => {
@@ -50,5 +50,3 @@ function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
         </div>
     );
 }
-
-export default Card;

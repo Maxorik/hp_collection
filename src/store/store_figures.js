@@ -27,13 +27,18 @@ class Collection {
         });
     }
 
+    /** количество отмеченных фигурок */
+    getCurrentCount() {
+        return this.collectionList.filter((item) => item.checked === 'true').length;
+    }
+
     /** Завершенность коллекции */
     get checkedItems() {
-        return `${ this.collectionList.filter((item) => item.checked === 'true').length }/${ this.collectionList.length }`;
+        return `${ this.getCurrentCount() }/${ this.collectionList.length }`;
     }
 
     get checkedItemsModern() {
-        return `${ this.collectionList.filter((item) => item.checked === 'true').length }/${ this.collectionList.filter((item) => +item.year > 2017).length }`;
+        return `${ this.getCurrentCount() }/${ this.collectionList.filter((item) => +item.year > 2017).length }`;
     }
 
     /** отметить найденный экземпляр */

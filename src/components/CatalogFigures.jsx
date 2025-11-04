@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
 import collection from "../store/store_figures";
 import { locale, lang } from '../store/locale'
-import Card from "./Card";
-import '../style/index.css'
+import { Card } from "./Card";
+import '../style/other.scss'
 
-const CatalogFigures = observer(({ showChecked, showModern, setFilterItemName, filterItemName, filterYear,
+export const CatalogFigures = observer(({ showChecked, showModern, setFilterItemName, filterItemName, filterYear,
             filterSetCode, setView, viewType, setShowCleanBtn }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
@@ -21,9 +21,9 @@ const CatalogFigures = observer(({ showChecked, showModern, setFilterItemName, f
     setShowCleanBtn(true);
   }
 
-  useEffect(() => {
-    collection.getCatalog();
-  }, []);
+  // useEffect(() => {
+  //   collection.getCatalog();
+  // }, []);
 
   function checkItem(id, state) {
     collection.setCheck(id, state)
@@ -86,5 +86,3 @@ const CatalogFigures = observer(({ showChecked, showModern, setFilterItemName, f
       </div>
   )
 })
-
-export default CatalogFigures;

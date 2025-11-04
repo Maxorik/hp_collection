@@ -3,7 +3,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import { locale, lang } from '../store/locale'
 
-const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode,
+export const SearchPopup = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode,
          setFilteredSetCode, setView, showCleanBtn, setShowCleanBtn }) => {
     const [hiddenClass, setHiddenClass] = useState('hidden-content');
     const [footerOpenerClassList, setFooterOpenerClassList] = useState('up');
@@ -128,5 +128,3 @@ const Footer = observer(({ setFilteredItemName, filterItemName, setFilteredYear,
         </>
     );
 })
-
-export default Footer;
