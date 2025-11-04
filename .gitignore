@@ -8,4 +8,4 @@
 /utils/html-parser/brickset.html
 /utils/scripts/*
 package-lock.json
-CNAME
+./CNAME
