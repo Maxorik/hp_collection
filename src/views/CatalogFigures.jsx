@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
 import collection from "../store/store_figures";
 import { locale, lang } from '../store/locale'
-import { Card } from "./Card";
+import { Card } from "../components/Card";
 import '../style/other.scss'
 
 export const CatalogFigures = observer(({ showChecked, showModern, setFilterItemName, filterItemName, filterYear,
