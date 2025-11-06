@@ -1,9 +1,10 @@
 import { observer } from "mobx-react-lite";
+import { SearchPopup } from './SearchPopup'
 
-export const Footer = observer(({ setPage }) => {
+export const Footer = observer(({ search }) => {
     return (
-        <footer className="footer-main flex">
-            hello
+        <footer>
+            <SearchPopup {...search} />
         </footer>
     );
 })

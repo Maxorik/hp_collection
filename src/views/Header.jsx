@@ -3,11 +3,11 @@ import { observer } from "mobx-react-lite";
 
 export const Header = observer(({ showModern }) => {
   return (
-    <div className="header">
+    <header>
         <div className='collection-info-header'>
             <img src='img/title2.png' className='header-logo-title-img' />
             <p className='header-text'>{ showModern ? collection.checkedItemsModern : collection.checkedItems  }</p>
         </div>
-    </div>
+    </header>
   );
 })

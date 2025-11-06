@@ -19,9 +19,11 @@ function PageRotes() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        collection.getCatalog();
-        pageRef.current = collection.getCurrentCount() ? 'collection' : 'start';
-        navigate(pageRef.current, { replace: false })
+        if (pageRef.current === '') {
+            collection.getCatalog();
+            pageRef.current = collection.getCurrentCount() ? 'collection' : 'start';
+            navigate(pageRef.current, { replace: false })
+        }
     }, []);
 
     return (

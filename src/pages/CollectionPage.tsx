@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Header, CatalogFigures, SearchPopup } from '../views'
+import { Header, CatalogFigures, SearchPopup, Footer } from '../views'
 
 export function CollectionPage() {
     const [showChecked, setShowChecked] = useState(true);
@@ -58,21 +58,21 @@ export function CollectionPage() {
                 setView = { setView }
                 setShowCleanBtn = { setShowCleanBtn }
             />
-            <SearchPopup
-                setFilteredItemName = { setFilteredItemName }
-                filterItemName = { filterItemName }
+            <Footer search={{
+                setFilteredItemName: setFilteredItemName,
+                filterItemName: filterItemName,
                 // setVisibleCheckedItems = { setVisibleCheckedItems }
                 // showChecked = { showChecked }
-                filterYear = { filterYear }
-                setFilteredYear = { setFilteredYear }
-                filterSetCode = { filterSetCode }
-                setFilteredSetCode = { setFilteredSetCode }
-                showModern = { showModern }
-                setVisibleModernItems = { setVisibleModernItems }
-                setView = { setView }
-                showCleanBtn = { showCleanBtn }
-                setShowCleanBtn = { setShowCleanBtn }
-            />
+                filterYear: filterYear,
+                setFilteredYear: setFilteredYear,
+                filterSetCode: filterSetCode,
+                setFilteredSetCode: setFilteredSetCode,
+                showModern: showModern,
+                setVisibleModernItems: setVisibleModernItems,
+                setView: setView,
+                showCleanBtn: showCleanBtn,
+                setShowCleanBtn: setShowCleanBtn
+            }} />
         </>
     );
 }
