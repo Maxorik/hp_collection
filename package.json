@@ -5,7 +5,6 @@
   "author": "maxorik",
   "license": "ISC",
   "dependencies": {
-    "@emotion/styled": "^11.11.0",
     "@vitejs/plugin-react": "^4.7.0",
     "axios": "1.11.0",
     "clsx": "^2.1.1",
