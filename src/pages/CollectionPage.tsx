@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { Header } from '../components'
-import { CatalogFigures, SearchPopup } from '../views'
+import { Header, CatalogFigures, SearchPopup } from '../views'
 
 export function CollectionPage() {
     const [showChecked, setShowChecked] = useState(true);

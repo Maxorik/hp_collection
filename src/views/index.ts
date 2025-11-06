@@ -1,2 +1,5 @@
 export * from './CatalogFigures'
 export * from './SearchPopup'
+export * from './Card'
+export * from './Header'
+export * from './Footer'

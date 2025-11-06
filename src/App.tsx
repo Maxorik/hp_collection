@@ -1,40 +1,38 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useRef } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { CollectionPage, StartPage, ManagePage, SettingsPage } from './pages';
-import { Loader, Footer } from './components'
 import collection from "./store/store_figures";
-
-export type IPages = 'manage' | 'collection' | 'start' | 'settings';
+import { Loader } from "./components";
 
 function App() {
-    const [activePage, setActivePage] = useState('');
+    return (
+        <BrowserRouter>
+            <main className='body-bg'>
+                <PageRotes />
+            </main>
+        </BrowserRouter>
+    );
+}
 
-    const handlerActivePage = (state: IPages): void => {
-        setActivePage(state)
-    }
+function PageRotes() {
+    const pageRef = useRef('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         collection.getCatalog();
-        !collection.getCurrentCount() ? setActivePage('start') : setActivePage('collection')
+        pageRef.current = collection.getCurrentCount() ? 'collection' : 'start';
+        navigate(pageRef.current, { replace: false })
     }, []);
 
     return (
-        <div className='body-bg'>
-            { activePage === '' ?
-                <Loader /> :
-                <div className=''>
-                    <>
-                        { activePage === 'start' && <StartPage pageHandler={ handlerActivePage } /> }
-                        { activePage === 'collection' && <CollectionPage pageHandler={handlerActivePage}/> }
-                        { activePage === 'manage' && <ManagePage pageHandler={handlerActivePage}/> }
-                        { activePage === 'settings' && <SettingsPage pageHandler={handlerActivePage}/> }
-                    </>
-                    <Footer
-                        setPage = { handlerActivePage }
-                    />
-                </div>
-            }
-        </div>
-    );
+        <Routes>
+            <Route path="*" element={ <Loader /> } />
+            <Route path="start" element={ <StartPage /> } />
+            <Route path="collection" element={ <CollectionPage /> } />
+            <Route path="manage" element={ <ManagePage /> } />
+            <Route path="settings" element={ <SettingsPage /> } />
+        </Routes>
+    )
 }
 
 export default App;
