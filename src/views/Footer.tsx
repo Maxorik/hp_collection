@@ -1,10 +1,17 @@
 import { observer } from "mobx-react-lite";
-import { SearchPopup } from './SearchPopup'
+import { Link } from 'react-router-dom';
+import { SearchPopup } from './SearchPopup';
 
-export const Footer = observer(({ search }) => {
+type TFooterButtons = 'search' | 'manage' | 'collection'
+
+export const Footer = observer(({ search, buttons }) => {
     return (
         <footer>
-            <SearchPopup {...search} />
+            <div className='footer-btn-container'>
+                <Link className='footer-opener footer-btn btn-statistic' to="/manage" />
+                <Link className='footer-opener footer-btn btn-collection' to="/collection" />
+            </div>
+            { search && <SearchPopup {...search} /> }
         </footer>
     );
 })
