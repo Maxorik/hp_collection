@@ -4,10 +4,11 @@ interface ProgressMeterProps {
     title: string;
     value: number;
     total: number;
+    color?: 'default' | 'green' | 'red' | 'blue' | 'yellow';
 }
 
-export const ProgressBar: React.FC<ProgressMeterProps> = ({ title, value, total }) => {
-    const percent = Math.min((value / total) * 100, 100);
+export const ProgressBar: FC<ProgressMeterProps> = ({ title, value, total, color='default' }) => {
+    const percent: number = Math.min((value / total) * 100, 100);
 
     return (
         <div className="progress-meter">
@@ -19,10 +20,11 @@ export const ProgressBar: React.FC<ProgressMeterProps> = ({ title, value, total 
                 value={value}
                 min={0}
                 max={total}
-                className="progress-meter__bar"
+                className={ `progress-meter__bar bar-${color}` }
             />
             <div className="progress-meter__footer">
                 <span>{value}</span>
+                <span>/</span>
                 <span>{total}</span>
             </div>
         </div>

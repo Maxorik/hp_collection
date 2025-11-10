@@ -5,6 +5,7 @@
 @import "check";
 @import "other";
 @import "progress";
+@import "carousel";
 
 @font-face {
   font-family: "HP2";
@@ -97,6 +98,19 @@ a {
   font-family: "HP";
 }
 
+h1 {
+  margin: 20px 0 0 20px;
+  font-weight: bold;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .h100 { height: 100vh }
 
 .mt-20 { margin-top: 20px }
+.mt-40 { margin-top: 40px }

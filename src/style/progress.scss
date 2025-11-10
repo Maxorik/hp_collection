@@ -1,9 +1,19 @@
+.progress-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
 .progress-meter {
   display: flex;
   flex-direction: column;
   gap: 6px;
   width: 100%;
   font-family: system-ui, sans-serif;
+  margin: 20px 0;
 }
 
 .progress-meter__header {
@@ -39,21 +49,31 @@
 }
 
 .progress-meter__bar::-webkit-meter-optimum-value {
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  background: linear-gradient(90deg, #8b7eb6, #51497c);
   border-radius: 8px;
   transition: width 0.3s ease;
 }
 
 /* Для Firefox */
 .progress-meter__bar::-moz-meter-bar {
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  background: linear-gradient(90deg, #8b7eb6, #51497c);
   border-radius: 8px;
   transition: width 0.3s ease;
 }
 
+.bar-green::-webkit-meter-optimum-value { background: linear-gradient(90deg, #074119, #003914) }
+.bar-green::-moz-meter-bar { background: linear-gradient(90deg, #074119, #003914) }
+.bar-red::-webkit-meter-optimum-value { background: linear-gradient(90deg, #b41e20, #891719) }
+.bar-red::-moz-meter-bar { background: linear-gradient(90deg, #b41e20, #891719) }
+.bar-blue::-webkit-meter-optimum-value { background: linear-gradient(90deg, #0e3b5e, #151924) }
+.bar-blue::-moz-meter-bar { background: linear-gradient(90deg, #0e3b5e, #151924) }
+.bar-yellow::-webkit-meter-optimum-value { background: linear-gradient(90deg, #cd992e, #b07a21) }
+.bar-yellow::-moz-meter-bar { background: linear-gradient(90deg, #cd992e, #b07a21) }
+
 .progress-meter__footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   font-size: 12px;
   color: #999;
+  gap: 4px;
 }

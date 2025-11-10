@@ -26,7 +26,15 @@ const lang = {
         searchTitle: 'Поиск по коллекции',
         view: 'Вид',
         startBtn: 'Начнем!',
-        greetings: 'Похоже, вы запустили приложение в первый раз.\n\n• отмечайте полученные фигурки\n• составляйте вишлист\n• смотрите статистику коллекции'
+        greetings: 'Похоже, вы запустили приложение в первый раз.\n\n• отмечайте полученные фигурки\n• составляйте вишлист\n• смотрите статистику коллекции',
+        statistic_title: 'Статистика коллекции',
+        all_figures: 'Все минифигурки',
+        mature_wizards: 'Волшебники',
+        gryffindor: 'Гриффиндор',
+        hufflepuff: 'Пуффендуй',
+        ravenclaw: 'Когтевран',
+        slytherin: 'Слизерин',
+        last_added: 'Последние добавленные',
     },
     en: {
         filterName: 'Search by name',
@@ -54,7 +62,14 @@ const lang = {
         view: 'View',
         startBtn: 'Let\'s start!',
         greetings: 'It looks like you\'ve launched the app for the first time.\n\n• mark the figures you\'ve received\n• create a wish list\n• view your collection statistics',
-        next: ''
+        statistic_title: 'Collection statistics',
+        all_figures: 'All minifigures',
+        mature_wizards: 'Wizards',
+        gryffindor: 'Gryffindor',
+        hufflepuff: 'Hufflepuff',
+        ravenclaw: 'Ravenclaw',
+        slytherin: 'Slytherin',
+        last_added: 'Latest additions',
     }
 }
 
