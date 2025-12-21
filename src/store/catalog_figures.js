@@ -1,4 +1,137 @@
 const figures = [{
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp568.png",
+    "name": "Marge Dursley",
+    "id": "hp568",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76451-1"
+},{
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp566.png",
+    "name": "Neville Longbottom",
+    "id": "hp566",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "40770-1"
+},{
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp589.png",
+    "name": "Harry Potter",
+    "id": "hp589",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp590.png",
+    "name": "Cho Chang",
+    "id": "hp590",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp591.png",
+    "name": "Draco Malfoy",
+    "id": "hp591",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp592.png",
+    "name": "Hannah Abbott",
+    "id": "hp592",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp593.png",
+    "name": "Angelina Johnson",
+    "id": "hp593",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp594.png",
+    "name": "Luna Lovegood",
+    "id": "hp594",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp595.png",
+    "name": "Blaise Zabini",
+    "id": "hp595",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp596.png",
+    "name": "Cedric Diggory",
+    "id": "hp596",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76456-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp579.png",
+    "name": "Cornelius Fudge",
+    "id": "hp579",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+},{
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp580.png",
+    "name": "Mrs. Flume",
+    "id": "hp580",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp581.png",
+    "name": "Katie Bell",
+    "id": "hp581",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp582.png",
+    "name": "Harry Potter",
+    "id": "hp582",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp583.png",
+    "name": "Madam Rosmerta",
+    "id": "hp583",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp584.png",
+    "name": "Horace Slughorn",
+    "id": "hp584",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp585.png",
+    "name": "Ron Weasley",
+    "id": "hp585",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp587.png",
+    "name": "Aberforth Dumbledore",
+    "id": "hp587",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+}, {
+    "img": "https://img.bricklink.com/itemimage/mn/0/hp588.png",
+    "name": "Hermione Granger",
+    "id": "hp588",
+    "year": "2025",
+    "checked": "false",
+    "setCode": "76457-1"
+},{
     "img": "https://img.bricklink.com/itemimage/mn/0/hp569.png",
     "name": "Neville Longbottom",
     "id": "hp569",
@@ -4032,4 +4165,27 @@ const figures = [{
     "setCode": "71028-17"
 } ]
 
-export default figures;
+function sortByYearAndId(arr) {
+  return arr.sort((a, b) => {
+    // 1. Сортировка по году (по убыванию)
+    const yearDiff = Number(b.year) - Number(a.year);
+    if (yearDiff !== 0) {
+      return yearDiff;
+    }
+
+    // 2. Числовая часть id
+    const getIdNumber = (id) => {
+      const match = id.match(/\d+/);
+      return match ? Number(match[0]) : 0;
+    };
+
+    const idA = getIdNumber(a.id);
+    const idB = getIdNumber(b.id);
+
+    // сортировка id по убыванию
+    return idB - idA;
+  });
+}
+
+const sortedFigures = sortByYearAndId(figures)
+export default sortedFigures;

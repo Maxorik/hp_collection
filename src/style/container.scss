@@ -26,12 +26,16 @@ header, footer {
   border-bottom: solid 2px rgb(255, 213, 2);
 }
 
+.footer-btn-container {
+  width: 1px;
+}
+
 footer, .footer-btn-container {
   display: flex;
   gap: 20px;
   bottom: 0;
   top: inherit;
-  height: 40px;
+  height: 60px;
 }
 
 footer {

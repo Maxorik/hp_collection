@@ -5,6 +5,7 @@
   "author": "maxorik",
   "license": "ISC",
   "dependencies": {
+    "@types/react": "^19.2.7",
     "@vitejs/plugin-react": "^4.7.0",
     "axios": "1.11.0",
     "clsx": "^2.1.1",
