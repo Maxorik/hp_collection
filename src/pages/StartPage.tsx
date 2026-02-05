@@ -7,8 +7,9 @@ export const StartPage = observer(() => {
         <div className='flex-center h100'>
             <div className="base-container flex-column">
                 <img alt="let's start" src='../img/greet.png' className='start-preview-img'/>
+                <h2>{ localize('greetingsTitle') }</h2>
                 <p className='break-line text-center'>{ localize('greetings') }</p>
-                <Link className='collection-btn mt-20' to="/collection">{ localize('startBtn') }</Link>
+                <Link className='button collection-btn mt-20' to="/collection">{ localize('startBtn') }</Link>
             </div>
         </div>
     );

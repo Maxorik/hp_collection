@@ -1,43 +1,42 @@
 .button {
   height: 40px;
   text-align: center;
-  color: rgb(221, 211, 238) !important;
+  color: rgb(12, 2, 28);
   border-radius: 4px;
   padding: 6px 2px;
   cursor: pointer;
-  background-color: #51497c !important;
+  background-color: rgb(255, 213, 2);
   white-space: nowrap;
   font-family: "Bloggersanslight" !important;
   font-size: 18px !important;
+  transition: background-color 0.3s ease;
+
+  &:active {
+    transform: translateY(0.5px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+  }
 }
 
 .button-check {
-  min-width: 200px;
-  width: 99.5%;
-  margin-top: 16px;
+  width: 96%;
+  margin-top: 8px;
+  border-radius: 4px;
+  height: 34px;
 }
 
 .button-check:hover {
-  background-color: #3a345b;
+  background-color: #8b7eb6;
 }
 
 .collection-btn {
   position: relative;
   width: 210px;
-  background-color: rgb(255, 213, 2);
-  color: #2e2828;
-  line-height: 28px;
   margin: 10px auto;
-  cursor: pointer;
-  border-radius: 2px;
-  text-align: center;
   font-family: "HP2";
-  font-size: 32px;
-  z-index: 4;
-  user-select: none;
-  -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
-  -moz-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
-  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
+}
+
+.modal-close:hover, .collection-btn:hover {
+  background-color: #8b7eb6;
 }
 
 .set-view-btn {
@@ -120,10 +119,6 @@
   align-items: center;
   color: #2e2828;
   box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.54);
-}
-
-.modal-close:hover, .collection-btn:hover {
-  background-color: #ed9205;
 }
 
 .filter-name-clean-btn {

@@ -59,12 +59,12 @@ export const CatalogFigures = observer(({ showChecked, showModern, setFilterItem
                   <div className='card-preview-image-container'>
                     <img alt={item.name} className='card-preview-image' src={`catalog_images/${[item.id]}.png`}/>
                   </div>
-                  {item.checked === 'false' && <div
+                  {item.checked === 'false' && <button
                       className='button button-check'
                       id={item.id}
                       onClick={() => checkItem(item.id, true)}>
                     {lang[locale].addBtnMini}
-                  </div>}
+                  </button>}
                 </div>
               })}
 

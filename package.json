@@ -6,13 +6,14 @@
   "license": "ISC",
   "dependencies": {
     "@types/react": "^19.2.7",
+    "@velumweb/ui-kit": "^1.0.2",
     "@vitejs/plugin-react": "^4.7.0",
     "axios": "1.11.0",
     "clsx": "^2.1.1",
     "mobx": "^6.10.2",
     "mobx-react-lite": "^4.0.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.5",
     "sass": "^1.93.3",
     "vite-plugin-pwa": "^1.0.2"

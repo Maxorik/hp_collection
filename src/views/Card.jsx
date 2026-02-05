@@ -39,10 +39,12 @@ export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
                                 </div> : <div style={{width: 20}} key={setCode}></div>
                             })}
                         </div>
-                        <div className='collection-btn' onClick={onClickCheckButton}>
-                            {isChecked ?
-                                <span className='checked-title'>{lang[locale].removeBtn}</span> :
-                                <span className='unchecked-title'>{lang[locale].addBtn}</span>}
+                        <div className='flex-center'>
+                            <button className='button collection-btn' onClick={onClickCheckButton}>
+                                {isChecked ?
+                                    <span className='checked-title'>{lang[locale].removeBtn}</span> :
+                                    <span className='unchecked-title'>{lang[locale].addBtn}</span>}
+                            </button>
                         </div>
                     </div>
                 </div>

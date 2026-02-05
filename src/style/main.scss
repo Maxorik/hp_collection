@@ -1,3 +1,5 @@
+@import '../../node_modules/@velumweb/ui-kit/dist/ui-kit.css';
+
 @import "buttons";
 @import "container";
 @import 'card';
@@ -33,7 +35,10 @@
 }
 
 html, .collection-body {
-  background: rgb(248, 248, 248);
+  //background: rgb(248, 248, 248);
+  background: hsl(0,48.4%,24.3%);
+  background-image: url("../../public/img/back.jpg");
+  background-position: center;
 }
 
 body {
@@ -53,7 +58,7 @@ body {
 
 .break-line {
   white-space: pre-line;
-  line-height: 1.7em;
+  line-height: 1.4em;
 }
 
 input::-webkit-outer-spin-button,
@@ -101,6 +106,10 @@ a {
 h1 {
   margin: 20px 0 0 20px;
   font-weight: bold;
+}
+
+h2 {
+  margin: 20px 0;
 }
 
 button {
