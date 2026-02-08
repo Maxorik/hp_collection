@@ -26,6 +26,11 @@ header, footer {
   border-bottom: solid 2px rgb(255, 213, 2);
 }
 
+.header-search {
+  display: flex;
+  justify-content: end;
+}
+
 .footer-btn-container {
   width: 1px;
 }
@@ -47,10 +52,19 @@ footer {
   margin: 78px auto;
 }
 
+.collection-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  width: 59.5vw;
+  margin: auto;
+}
+
 .collection-info-header {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
 }
 

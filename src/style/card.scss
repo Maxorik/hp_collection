@@ -6,10 +6,10 @@
 }
 
 .card-grid {
-  margin-left: 1px;
   display: grid;
   grid-template-columns: repeat(6, 16%);
-  grid-gap: 10px;
+  grid-gap: 6px;
+  width: 59vw;
 }
 
 .card-preview {

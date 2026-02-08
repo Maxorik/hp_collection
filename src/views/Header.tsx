@@ -14,16 +14,23 @@ export const Header = observer(({ showModern }) => {
 
     return (
         <header>
-            <div className='collection-info-header'>
-                <img src='img/title2.png' className='header-logo-title-img' />
-                <p className='header-text'>{ showModern ? collection.checkedItemsModern : collection.checkedItems  }</p>
-                { !isMobile && <Input
-                    placeholder={ localize('searchPlaceholder') }
-                    live={true}
-                    isSearch={true}
-                    value={search}
-                    onChange={searchHandler}
-                /> }
+            <div className='collection-header'>
+                <div className='collection-info-header'>
+                    <img src='img/title2.png' className='header-logo-title-img'/>
+                    <p className='header-text'>{showModern ? collection.checkedItemsModern : collection.checkedItems}</p>
+                </div>
+                {!isMobile &&
+                    <div className='header-search'>
+                        <Input
+                            placeholder={localize('searchPlaceholder') }
+                            live={true}
+                            isSearch={true}
+                            value={search}
+                            onChange={searchHandler}
+                            cls='w200'
+                        />
+                    </div>
+                }
             </div>
         </header>
     );
