@@ -77,42 +77,6 @@ export const SearchPopup = observer(({ setFilteredItemName, filterItemName, setF
                         onClick={(e) => onFilter(e, setFilteredSetCode, true)}
                     />
                 </div>
-
-                {/** DEPRECATED */}
-                {/*<div className='filter-all-checkbox-container'>*/}
-                    {/* чекбокс "показывать отмеченные" */}
-                    {/*<div className='filter-checkbox-container'>*/}
-                    {/*    <input*/}
-                    {/*        type='checkbox'*/}
-                    {/*        checked={ showChecked }*/}
-                    {/*        onChange={ (e) => setVisibleCheckedItems(e.target.checked) }*/}
-                    {/*        className='checkbox'*/}
-                    {/*        id='show-checked-checkbox'*/}
-                    {/*    />*/}
-                    {/*    <label htmlFor="show-checked-checkbox" className="checkbox-label"/>*/}
-                    {/*    <p>{ lang[locale].showCheckedTip }</p>*/}
-                    {/*</div>*/}
-                    {/* чекбокс "показывать только 2018+" */}
-                    {/*<div className='filter-checkbox-container'>*/}
-                    {/*    <p>{lang[locale].showOnlynewTip}</p>*/}
-                    {/*    <input*/}
-                    {/*        type='checkbox'*/}
-                    {/*        checked={showModern}*/}
-                    {/*        onChange={(e) => setVisibleModernItems(e.target.checked)}*/}
-                    {/*        className='checkbox'*/}
-                    {/*        id='show-modern-checkbox'*/}
-                    {/*    />*/}
-                    {/*    <label htmlFor="show-modern-checkbox" className="checkbox-label"/>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-                {/* сброс коллекции */}
-                {/*<button*/}
-                {/*    className='filter-reset-btn'*/}
-                {/*    onClick={ () => collection.resetLocalStorage() }*/}
-                {/*>*/}
-                {/*    { lang[locale].discardBtn }*/}
-                {/*</button>*/}
-
                 <div className='view-interface-container'>
                     <p className='footer-text footer-input-title-left'>{lang[locale].view}</p>
                     <div className='view-interface-container-buttons'>
