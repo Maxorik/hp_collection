@@ -21,7 +21,8 @@ function PageRotes() {
     useEffect(() => {
         if (pageRef.current === '') {
             collection.getCatalog();
-            pageRef.current = collection.getCurrentCount() ? 'collection' : 'start';
+            // pageRef.current = collection.getCurrentCount() ? 'collection' : 'start';
+            pageRef.current = 'collection'
             navigate(pageRef.current, { replace: false })
         }
     }, []);
