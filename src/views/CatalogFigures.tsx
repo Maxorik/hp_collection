@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
 import collection from "../store/store_figures";
 import { locale, lang } from '../store/locale'
+import {IFigures} from "../store/catalog_figures";
 import { Card } from "./Card";
 import '../style/other.scss'
 
-export const CatalogFigures = observer(({ showChecked, showModern, setFilterItemName, filterItemName, filterYear,
-            filterSetCode, setView, viewType, setShowCleanBtn }) => {
+export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
+                                          setView, setFilterItemName, viewType, setShowCleanBtn }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
@@ -30,17 +31,20 @@ export const CatalogFigures = observer(({ showChecked, showModern, setFilterItem
   }
 
   /** Определяем, что показывать на основании фильтров */
-  function setVisible(item) {
-    const nameMatched = filterItemName === '' || item.name.toLowerCase().includes(filterItemName.toLowerCase());
-    const yearMatched = filterYear === '' || item.year.includes(filterYear);
-    const setCodeMatched = filterSetCode === '' || item.setCode.includes(filterSetCode);
+  function setVisible(item: IFigures) {
     const onlyChecked = showChecked || !showChecked && item.checked === 'false';
     const onlyModern = !showModern || showModern && +item.year > 2017;
-    return nameMatched && setCodeMatched && yearMatched && onlyChecked && onlyModern;
+    return checkIncludes(figureFilter, item) && onlyChecked && onlyModern;
+  }
+
+  function checkIncludes(data: string, item: IFigures) {
+    data = data.trim();
+    return data === '' || item.name.toLowerCase().includes(data) || item.id.includes(data)
+        || item.year.includes(data) || item.setCode.includes(data);
   }
 
   function showRow(item) {
-    return filterItemName === '' || item.name.toLowerCase().includes(filterItemName.toLowerCase());
+    return figureFilter === '' || item.name.toLowerCase().includes(figureFilter.toLowerCase());
   }
 
   return (

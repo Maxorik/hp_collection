@@ -5,11 +5,11 @@ import { isMobile } from "../store/settings";
 import { localize } from '../store/locale'
 import { Input } from "@velumweb/ui-kit";
 
-export const Header = observer(({ showModern }) => {
+export const Header = observer(({ showModern, setFigureFilter }) => {
     const [search, setSearch] = useState();
     function searchHandler(val) {
-        console.log(val)
-        setSearch(val)
+        setFigureFilter(val);
+        setSearch(val);
     }
 
     return (
@@ -19,7 +19,7 @@ export const Header = observer(({ showModern }) => {
                     <img src='img/title2.png' className='header-logo-title-img'/>
                     <p className='header-text'>{showModern ? collection.checkedItemsModern : collection.checkedItems}</p>
                 </div>
-                {!isMobile &&
+                {/*{!isMobile &&*/}
                     <div className='header-search'>
                         <Input
                             placeholder={localize('searchPlaceholder') }
@@ -30,7 +30,7 @@ export const Header = observer(({ showModern }) => {
                             cls='w200'
                         />
                     </div>
-                }
+                {/*}*/}
             </div>
         </header>
     );

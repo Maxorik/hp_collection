@@ -1,4 +1,14 @@
-const figures = [{
+
+export interface IFigures {
+    img: string;
+    name: string;
+    id: string;
+    year: string;
+    checked: string;
+    setCode: string;
+}
+
+const figures: IFigures[] = [{
     "img": "https://img.bricklink.com/itemimage/mn/0/hp568.png",
     "name": "Marge Dursley",
     "id": "hp568",
@@ -4165,15 +4175,14 @@ const figures = [{
     "setCode": "71028-17"
 } ]
 
+// возвращает сортированный список по году + id
 function sortByYearAndId(arr) {
   return arr.sort((a, b) => {
-    // 1. Сортировка по году (по убыванию)
     const yearDiff = Number(b.year) - Number(a.year);
     if (yearDiff !== 0) {
       return yearDiff;
     }
 
-    // 2. Числовая часть id
     const getIdNumber = (id) => {
       const match = id.match(/\d+/);
       return match ? Number(match[0]) : 0;
@@ -4182,7 +4191,6 @@ function sortByYearAndId(arr) {
     const idA = getIdNumber(a.id);
     const idB = getIdNumber(b.id);
 
-    // сортировка id по убыванию
     return idB - idA;
   });
 }

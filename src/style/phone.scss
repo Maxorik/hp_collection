@@ -9,24 +9,21 @@
     height: 10em;
   }
   .button {
-    height: 40px;
-    margin: 0;
+    height: 36px;
   }
   .header-logo-title-img {
-    width: 200px;
-    margin: 0;
+    width: 190px;
+    margin: 4px 0 0 4px;
     height: auto;
   }
-  .collection-info-header {
-    margin-left: 24px;
-  }
   .collection-btn {
-    line-height: 38px;
+    line-height: 26px;
   }
   header {
     height: auto;
   }
   .header-text {
+    display: none;
     margin: 0 0 2px -10px;
   }
   .collection-body {
@@ -75,6 +72,13 @@
   }
   h1 {
     text-align: center;
+  }
+  .collection-header {
+    width: 100%;
+  }
+  .header-search {
+    margin-right: 8px;
+    width: 180px;
   }
 }
 
