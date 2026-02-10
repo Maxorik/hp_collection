@@ -1,3 +1,5 @@
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { makeAutoObservable } from "mobx";
 import figures from './catalog_figures'
 

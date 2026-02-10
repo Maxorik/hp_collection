@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
-import collection from "../store/store_figures";
+import collection from "../store/figuresModel";
 import { locale, lang } from '../store/locale'
 import {IFigures} from "../store/catalog_figures";
 import { Card } from "./Card";

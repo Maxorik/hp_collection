@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { CollectionPage, StartPage, ManagePage, SettingsPage } from './pages';
-import collection from "./store/store_figures";
+import collection from "./store/figuresModel";
 import { Loader } from "./components";
 
 function App() {

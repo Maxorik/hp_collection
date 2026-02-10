@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import collection from "../store/store_figures";
+import collection from "../store/figuresModel";
 import { localize } from '../store/locale'
 import { Footer } from "../views";
 import { ProgressBar } from "../components";

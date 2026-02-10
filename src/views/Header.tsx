@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import collection from "../store/store_figures";
+import collection from "../store/figuresModel";
 import { observer } from "mobx-react-lite";
 import { isMobile } from "../store/settings";
 import { localize } from '../store/locale'

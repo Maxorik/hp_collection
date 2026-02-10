@@ -1,5 +1,5 @@
 {
-  "name": "lego-collection",
+  "name": "lego-hp-collection",
   "version": "0.1.0",
   "homepage": "./",
   "author": "maxorik",
@@ -10,6 +10,7 @@
     "@vitejs/plugin-react": "^4.7.0",
     "axios": "1.11.0",
     "clsx": "^2.1.1",
+    "firebase": "^12.9.0",
     "mobx": "^6.10.2",
     "mobx-react-lite": "^4.0.5",
     "react": "^19.2.0",
