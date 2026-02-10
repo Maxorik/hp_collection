@@ -38,7 +38,7 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
   }
 
   function checkIncludes(data: string, item: IFigures) {
-    data = data.trim();
+    data = data.trim().toLowerCase();
     return data === '' || item.name.toLowerCase().includes(data) || item.id.includes(data)
         || item.year.includes(data) || item.setCode.includes(data);
   }
