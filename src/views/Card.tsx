@@ -1,4 +1,5 @@
 import { locale, lang } from '../service/locale'
+import { setViewUrl } from '../service/globals'
 import { useState } from "react";
 
 export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
@@ -6,7 +7,7 @@ export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
 
     const getHref = (href) => {
         const parsedHrefCode = href.match(/\d+/) ? href.match(/\d+/)[0] : '';
-        return `https://www.lego.com/en-us/service/buildinginstructions/${parsedHrefCode}`;
+        return `${setViewUrl[locale]}${parsedHrefCode}`;
     }
 
     const tagsClassname = (cardName) => {
