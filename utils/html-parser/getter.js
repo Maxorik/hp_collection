@@ -33,7 +33,7 @@ const addItems = () => {
     /** Различные способы вывода парсинга *****************************************************************************/
 
     /** Стандартный парсинг для json */
-    const htmlStrings1 = catalog.map(item =>`{"img": "${item.img}", "name": "${item.name}", "id": "${item.id}", "year": "${item.year}", "checked": "false", "setCode": "${item.setCode.join(' ')}"},`
+    const htmlStrings1 = catalog.map(item =>`{"name": "${item.name}", "id": "${item.id}", "year": "${item.year}", "setCode": "${item.setCode.join(' ')}"},`
     );
     /** Парсинг для сброса отмеченных */
     const htmlStrings2 = catalog.map(item =>`{"code": "${item.code}", "checked": "false"},`
