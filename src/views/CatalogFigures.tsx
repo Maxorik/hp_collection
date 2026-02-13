@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
-import collection from "../store/figuresModel";
-import { locale, lang } from '../store/locale'
-import {IFigures} from "../store/catalog_figures";
+import collection from "../service/figuresModel";
+import { locale, lang } from '../service/locale'
+import {IFigures} from "../service/figuresModel";
 import { Card } from "./Card";
 import '../style/other.scss'
 

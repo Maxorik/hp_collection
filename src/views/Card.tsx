@@ -1,4 +1,4 @@
-import { locale, lang } from '../store/locale'
+import { locale, lang } from '../service/locale'
 import { useState } from "react";
 
 export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {

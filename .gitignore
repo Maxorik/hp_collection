@@ -1,7 +1,7 @@
 # dependencies
 /node_modules
 /assets
-/src/store/config.js
+/src/service/config.js
 /build
 .idea
 *.bak

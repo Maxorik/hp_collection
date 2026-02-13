@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import { CollectionPage, StartPage, ManagePage, SettingsPage } from './pages';
-import collection from "./store/figuresModel";
-import { Loader } from "./components";
+import { CollectionPage } from './pages';
+import collection from "./service/figuresModel";
+import { Loader } from "./components/Loader";
 
 function App() {
     return (
@@ -30,10 +30,7 @@ function PageRotes() {
     return (
         <Routes>
             <Route path="*" element={ <Loader /> } />
-            <Route path="start" element={ <StartPage /> } />
             <Route path="collection" element={ <CollectionPage /> } />
-            <Route path="manage" element={ <ManagePage /> } />
-            <Route path="settings" element={ <SettingsPage /> } />
         </Routes>
     )
 }

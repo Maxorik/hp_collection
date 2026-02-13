@@ -1,5 +1,15 @@
 import { makeAutoObservable } from "mobx";
-import figures from './catalog_figures'
+import figures from './figuresStore'
+
+export interface IFigures {
+    img: string;
+    name: string;
+    id: string;
+    year: string;
+    checked: string;
+    setCode: string;
+    favorite?: boolean;
+}
 
 class Collection {
     constructor() {

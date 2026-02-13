@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
 import clsx from "clsx";
-import { locale, lang } from '../store/locale'
+import { locale, lang } from '../service/locale'
 
 export const SearchPopup = observer(({ setFilteredItemName, filterItemName, setFilteredYear, filterYear, filterSetCode,
          setFilteredSetCode, setView, showCleanBtn, setShowCleanBtn }) => {

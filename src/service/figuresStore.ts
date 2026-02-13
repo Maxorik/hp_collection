@@ -1,13 +1,4 @@
-
-export interface IFigures {
-    img: string;
-    name: string;
-    id: string;
-    year: string;
-    checked: string;
-    setCode: string;
-    favorite?: boolean;
-}
+import { IFigures } from "./figuresModel";
 
 const figures: IFigures[] = [{
     "img": "https://img.bricklink.com/itemimage/mn/0/hp568.png",
@@ -3583,22 +3574,22 @@ const figures: IFigures[] = [{
 
 // возвращает сортированный список по году + id
 function sortByYearAndId(arr: IFigures[]) {
-  return arr.sort((a, b) => {
-    const yearDiff = Number(b.year) - Number(a.year);
-    if (yearDiff !== 0) {
-  return yearDiff;
-    }
+    return arr.sort((a, b) => {
+        const yearDiff = Number(b.year) - Number(a.year);
+        if (yearDiff !== 0) {
+            return yearDiff;
+        }
 
-    const getIdNumber = (id: string) => {
-  const match = id.match(/\d+/);
-  return match ? Number(match[0]) : 0;
-    };
+        const getIdNumber = (id: string) => {
+            const match = id.match(/\d+/);
+            return match ? Number(match[0]) : 0;
+        };
 
-    const idA = getIdNumber(a.id);
-    const idB = getIdNumber(b.id);
+        const idA = getIdNumber(a.id);
+        const idB = getIdNumber(b.id);
 
-    return idB - idA;
-  })
+        return idB - idA;
+    })
 }
 
 const sortedFigures = sortByYearAndId(figures)
