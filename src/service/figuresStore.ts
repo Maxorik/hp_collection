@@ -15,7 +15,7 @@ const figures: IFigures[] = [
         "name": "Cedric Diggory",
         "id": "hp507",
         "year": "2024",
-        "setCode": "ISBN9780744098952-1"
+        "setCode": "nonset"
     }, {
         "name": "Harry Potter",
         "id": "hp597",
@@ -96,36 +96,6 @@ const figures: IFigures[] = [
         "id": "hp612",
         "year": "2026",
         "setCode": "76466-1"
-    }, {
-        "name": "Harry Potter",
-        "id": "hp589",
-        "year": "2025",
-        "setCode": "76456-1"
-    }, {
-        "name": "Cho Chang",
-        "id": "hp590",
-        "year": "2025",
-        "setCode": "76456-1"
-    }, {
-        "name": "Draco Malfoy",
-        "id": "hp591",
-        "year": "2025",
-        "setCode": "76456-1"
-    }, {
-        "name": "Hannah Abbott",
-        "id": "hp592",
-        "year": "2025",
-        "setCode": "76456-1"
-    }, {
-        "name": "Angelina Johnson",
-        "id": "hp593",
-        "year": "2025",
-        "setCode": "76456-1"
-    }, {
-        "name": "Luna Lovegood",
-        "id": "hp594",
-        "year": "2025",
-        "setCode": "76456-1"
     }, {
     "name": "Marge Dursley",
     "id": "hp568",
@@ -940,7 +910,7 @@ const figures: IFigures[] = [
     "name": "Rita Skeeter",
     "id": "hp442",
     "year": "2023",
-    "setCode": "journal"
+    "setCode": "nonset"
 }, {
     "name": "Harry Potter",
     "id": "hp443",
@@ -1820,7 +1790,7 @@ const figures: IFigures[] = [
     "name": "Tom Riddle",
     "id": "hp242",
     "year": "2020",
-    "setCode": "Journal"
+    "setCode": "nonset"
 }, {
     "name": "Gilderoy Lockhart",
     "id": "hp243",
@@ -1911,11 +1881,6 @@ const figures: IFigures[] = [
     "id": "hp262",
     "year": "2020",
     "setCode": "30628-1"
-}, {
-    "name": "Professor Minerva McGonagall",
-    "id": "hp152a",
-    "year": "2019",
-    "setCode": "75964-1"
 }, {
     "name": "Sirius Black",
     "id": "hp174",
