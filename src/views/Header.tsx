@@ -17,20 +17,19 @@ export const Header = observer(({ showModern, setFigureFilter }) => {
             <div className='collection-header'>
                 <div className='collection-info-header'>
                     <img src='img/title2.png' className='header-logo-title-img'/>
-                    <p className='header-text'>{showModern ? collection.checkedItemsModern : collection.checkedItems}</p>
+                    {!isMobile && <p className='header-text'>{showModern ? collection.checkedItemsModern : collection.checkedItems}</p>}
                 </div>
-                {/*{!isMobile &&*/}
-                    <div className='header-search'>
-                        <Input
-                            placeholder={localize('searchPlaceholder') }
-                            live={true}
-                            isSearch={true}
-                            value={search}
-                            onChange={searchHandler}
-                            cls='w200'
-                        />
-                    </div>
-                {/*}*/}
+                <div className='header-search'>
+                    {isMobile && <p className='header-text'>{showModern ? collection.checkedItemsModern : collection.checkedItems}</p>}
+                    <Input
+                        placeholder={localize('searchPlaceholder') }
+                        live={true}
+                        isSearch={true}
+                        value={search}
+                        onChange={searchHandler}
+                        cls='w200'
+                    />
+                </div>
             </div>
         </header>
     );
