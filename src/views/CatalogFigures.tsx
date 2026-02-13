@@ -69,7 +69,6 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                     <button
                         className={`favorite-btn ${item.favorite ? "active" : ""}`}
                         onClick={() => onToggleFavorite(item.id, !item.favorite)}
-                        aria-label="Add to favorites"
                     >
                       {item.favorite ? "❤️" : "🤍"}
                     </button>
@@ -77,7 +76,7 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                   <div className='card-preview-image-container'>
                     <img alt={item.name} className='card-preview-image' src={`catalog_images/${[item.id]}.png`}/>
                   </div>
-                  {item.checked === 'false' && <button
+                  {item.checked !== 'true' && <button
                       className='button button-check'
                       id={item.id}
                       onClick={() => checkItem(item.id, true)}>
