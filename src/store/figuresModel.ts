@@ -1,5 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { makeAutoObservable } from "mobx";
 import figures from './catalog_figures'
 
@@ -24,6 +22,7 @@ class Collection {
             const localItem = localCollection.find(bItem => bItem.id === item.id);
             if (localItem) {
                 newItem.checked = localItem.checked;
+                newItem.favorite = localItem.favorite;
             }
             return newItem;
         });
@@ -44,17 +43,25 @@ class Collection {
     }
 
     /** отметить найденный экземпляр */
-    setCheck(id, state) {
+    setCheck(id: string, state: boolean) {
         this.collectionList = this.collectionList.map(item => item.id === id ? { ...item, checked: state.toString() } : item );
+        this.updateLocalStorage();
+    }
+
+    /** добавить в избранное */
+    setFavorite(id: string, state: boolean) {
+        this.collectionList = this.collectionList.map(item => item.id === id ? { ...item, favorite: state.toString() } : item );
         this.updateLocalStorage();
     }
 
     /** Обновить локальный стор */
     updateLocalStorage() {
         const collection = this.collectionList.map(item => {
-            return { id: item.id, checked: item.checked }
+            return { id: item.id, checked: item.checked, favorite: item.favorite }
         } );
         localStorage.setItem('hp_collection', JSON.stringify(collection));
+
+        console.log(localStorage.getItem('hp_collection'))
     }
 
     /** Сбросить локальный стор DEPRECATED*/

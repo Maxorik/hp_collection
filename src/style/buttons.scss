@@ -144,3 +144,19 @@
   text-align: center;
   cursor: pointer;
 }
+
+.favorite-btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+.favorite-btn.active {
+  color: red;
+}

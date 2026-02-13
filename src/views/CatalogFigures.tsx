@@ -47,6 +47,10 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
     return figureFilter === '' || item.name.toLowerCase().includes(figureFilter.toLowerCase());
   }
 
+  function onToggleFavorite(id: string, state: boolean) {
+    collection.setFavorite(id, state)
+  }
+
   return (
       <div className='collection-body'>
         <div className='preload-image'><img alt='' src="../../public/img/card_back.png"/></div>
@@ -57,9 +61,19 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                     className={`card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}`}
                     key={item.id}
                     onClick={(e) => {
-                      !e.target.classList.contains('button') && showModal(true, item)
+                      e.target.nodeName.toLowerCase() !== 'button' && showModal(true, item)
                     }}
                 >
+                  <div className='flex-sb'>
+                    <b>#{item.id}</b>
+                    <button
+                        className={`favorite-btn ${item.favorite ? "active" : ""}`}
+                        onClick={() => onToggleFavorite(item.id, !item.favorite)}
+                        aria-label="Add to favorites"
+                    >
+                      {item.favorite ? "❤️" : "🤍"}
+                    </button>
+                  </div>
                   <div className='card-preview-image-container'>
                     <img alt={item.name} className='card-preview-image' src={`catalog_images/${[item.id]}.png`}/>
                   </div>
