@@ -69,8 +69,6 @@ class Collection {
             return { id: item.id, checked: item.checked, favorite: item.favorite }
         } );
         localStorage.setItem('hp_collection', JSON.stringify(collection));
-
-        console.log(localStorage.getItem('hp_collection'))
     }
 
     /** Сбросить локальный стор DEPRECATED*/

@@ -146,17 +146,20 @@
 }
 
 .favorite-btn {
-  font-size: 22px;
-  background: none;
-  border: none;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
+  fill: none;
+  stroke: black;
   transition: transform 0.1s ease;
+  margin-top: 4px;
 }
 
 .favorite-btn:hover {
   transform: scale(1.2);
 }
 
-.favorite-btn.active {
-  color: red;
+.favorite-active > path {
+  fill: red;
+  stroke: black;
 }

@@ -5,6 +5,7 @@ import { locale, lang } from '../service/locale'
 import {IFigures} from "../service/figuresModel";
 import { Card } from "./Card";
 import '../style/other.scss'
+import Heart from '../../public/img/hearth.svg?react';
 
 export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                                           setView, setFilterItemName, viewType, setShowCleanBtn }) => {
@@ -66,11 +67,11 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                 >
                   <div className='flex-sb'>
                     <b>#{item.id}</b>
-                    <button
-                        className={`favorite-btn ${item.favorite ? "active" : ""}`}
-                        onClick={() => onToggleFavorite(item.id, !item.favorite)}
-                    >
-                      {item.favorite ? "❤️" : "🤍"}
+                    <button className='favorite-btn'>
+                      <Heart
+                          className={item.favorite ? 'favorite-active' : ''}
+                          onClick={() => onToggleFavorite(item.id, !item.favorite)}
+                      />
                     </button>
                   </div>
                   <div className='card-preview-image-container'>
