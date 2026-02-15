@@ -134,3 +134,11 @@ footer {
   gap: 6px;
   margin-bottom: 10px;
 }
+
+.card-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}

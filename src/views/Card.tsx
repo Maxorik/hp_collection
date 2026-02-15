@@ -1,8 +1,9 @@
+import React, { useState } from "react";
 import { locale, lang } from '../service/locale'
 import { setViewUrl } from '../service/globals'
-import { useState } from "react";
+import Heart from '../../public/img/hearth.svg?react';
 
-export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
+export function Card({ modal, showModal, selectedCard, onClickCheckBtn, onToggleFavorite }) {
     const [isChecked, setChecked] = useState(selectedCard.checked === 'true')
 
     const getHref = (href) => {
@@ -17,6 +18,11 @@ export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
     const onClickCheckButton = () => {
         onClickCheckBtn(selectedCard.id, !isChecked);
         setChecked(!isChecked)
+    }
+
+    const onClickFavorite = (id: string, state: boolean) => {
+        onToggleFavorite(id, state);
+        selectedCard.favorite = state.toString()
     }
 
     return (
@@ -40,11 +46,17 @@ export function Card({ modal, showModal, selectedCard, onClickCheckBtn }) {
                                 </div> : <div style={{width: 20}} key={setCode}></div>
                             })}
                         </div>
-                        <div className='flex-center'>
+                        <div className='card-buttons-container'>
                             <button className='button collection-btn' onClick={onClickCheckButton}>
                                 {isChecked ?
                                     <span className='checked-title'>{lang[locale].removeBtn}</span> :
                                     <span className='unchecked-title'>{lang[locale].addBtn}</span>}
+                            </button>
+                            <button className='button favorite-btn-card'>
+                                <Heart
+                                    className={selectedCard.favorite === 'true' ? 'favorite-active' : ''}
+                                    onClick={() => onClickFavorite(selectedCard.id, selectedCard.favorite === 'false')}
+                                />
                             </button>
                         </div>
                     </div>

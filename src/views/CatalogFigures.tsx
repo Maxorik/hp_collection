@@ -92,6 +92,7 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                   selectedCard={selectedCard}
                   showModal={showModal}
                   onClickCheckBtn={checkItem}
+                  onToggleFavorite={onToggleFavorite}
               />}
             </div> : <div className="card-row">
               {collection.tableFigureList.map((item, index) => showRow(item) &&
