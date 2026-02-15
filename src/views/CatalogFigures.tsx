@@ -62,15 +62,16 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                     className={`card-preview ${item.checked === 'true' ? 'card-checked-mask' : ''}`}
                     key={item.id}
                     onClick={(e) => {
-                      e.target.nodeName.toLowerCase() !== 'button' && showModal(true, item)
+                      (e.target.nodeName.toLowerCase() === 'img' || e.target.classList.contains('card-checked-mask'))
+                        && showModal(true, item)
                     }}
                 >
                   <div className='flex-sb'>
                     <b>#{item.id}</b>
                     <button className='favorite-btn'>
                       <Heart
-                          className={item.favorite ? 'favorite-active' : ''}
-                          onClick={() => onToggleFavorite(item.id, !item.favorite)}
+                          className={item.favorite === 'true' ? 'favorite-active' : ''}
+                          onClick={() => onToggleFavorite(item.id, item.favorite === 'false')}
                       />
                     </button>
                   </div>
