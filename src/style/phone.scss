@@ -8,9 +8,6 @@
   .card-preview {
     height: 220px;
   }
-  .button {
-    height: 36px;
-  }
   .header-logo-title-img {
     width: 190px;
     margin: 4px 0 0 4px;
@@ -82,6 +79,17 @@
   }
   .button-check {
     margin-top: 2px;
+    &:hover {
+      background-color: rgb(255, 213, 2);
+    }
+  }
+  .button-secondary {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    &:hover {
+      background-color: #8b7eb6;
+      color: #FFFFFF;
+    }
   }
 }
 
