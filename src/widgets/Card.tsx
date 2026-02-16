@@ -31,7 +31,7 @@ export function Card({ modal, showModal, selectedCard, onClickCheckBtn, onToggle
                 <div className="modal" onClick={() => showModal(false)}>
                     <div className="modal-content" onClick={e => e.stopPropagation()}>
                         <button className="modal-close" onClick={() => showModal(false)}>&times;</button>
-                        <div className={`card-in-modal ${selectedCard.checked === 'true' && 'card-checked-modal'}`}>
+                        <div className={`card-in-modal ${isChecked ? 'card-checked-modal' : ''}`}>
                             <img alt={selectedCard.name} className='card-modal-image'
                                  src={`catalog_images/${[selectedCard.id]}.png`}/>
                         </div>
