@@ -42,22 +42,6 @@
   flex-shrink: 0;
 }
 
-.card-checked-mask {
-  position: relative;
-}
-
-.card-checked-mask::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #51497c;
-  background-image: url("../../public/img/checked_back.png");
-  opacity: 0.25;
-}
-
 .card-in-modal {
   width: 250px;
   height: 100%;
@@ -65,6 +49,11 @@
   display: flex;
   clip-path: polygon(-35% 47%, 50% -6%, 139% 49%, 3% 250%, 0% 100%);
   background-color: #ffeebe;
+}
+
+.card-checked-mask, .card-checked-modal {
+  background-color: #8b7eb6;
+  background-image: url("../../public/img/checked_back.png");
 }
 
 .card-modal-image {

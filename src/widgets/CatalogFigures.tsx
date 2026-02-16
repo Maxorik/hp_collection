@@ -78,12 +78,12 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                   <div className='card-preview-image-container'>
                     <img alt={item.name} className='card-preview-image' src={`catalog_images/${[item.id]}.png`}/>
                   </div>
-                  {item.checked !== 'true' && <button
-                      className='button button-check'
+                  <button
+                      className={`button button-check ${item.checked === 'true' && 'button-secondary'}`}
                       id={item.id}
                       onClick={() => checkItem(item.id, true)}>
-                    {lang[locale].addBtnMini}
-                  </button>}
+                    {item.checked !== 'true' ? lang[locale].addBtnMini : lang[locale].removeBtnShort}
+                  </button>
                 </div>
               })}
 

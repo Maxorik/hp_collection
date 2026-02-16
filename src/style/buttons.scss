@@ -3,7 +3,6 @@
   text-align: center;
   color: rgb(12, 2, 28);
   border-radius: 4px;
-  padding: 6px 2px;
   cursor: pointer;
   background-color: rgb(255, 213, 2);
   white-space: nowrap;
@@ -26,6 +25,17 @@
 
 .button-check:hover {
   background-color: #8b7eb6;
+}
+
+.button-secondary {
+  background-color: #8b7eb6;
+  border: 2px solid rgb(255, 213, 2);
+  color: rgb(255, 213, 2);
+
+  &:hover {
+    background-color: rgb(255, 213, 2);
+    color: #000;
+  }
 }
 
 .collection-btn {
