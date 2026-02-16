@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Header, CatalogFigures } from '../views'
+import { Header, CatalogFigures } from '../widgets'
 
 export function CollectionPage() {
     const [showChecked, setShowChecked] = useState(true);

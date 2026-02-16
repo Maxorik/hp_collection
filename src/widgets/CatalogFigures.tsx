@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
-import collection from "../service/figuresModel";
+import collection from "../service/figures/figuresModel";
 import { locale, lang } from '../service/locale'
-import {IFigures} from "../service/figuresModel";
+import {IFigures} from "../service/figures/figuresModel";
 import { Card } from "./Card";
 import '../style/other.scss'
 import Heart from '../../public/img/hearth.svg?react';

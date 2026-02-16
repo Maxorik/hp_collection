@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { locale, lang } from '../service/locale'
-import { setViewUrl } from '../service/globals'
+import { setViewUrl } from '../service/config/globals'
 import Heart from '../../public/img/hearth.svg?react';
 
 export function Card({ modal, showModal, selectedCard, onClickCheckBtn, onToggleFavorite }) {

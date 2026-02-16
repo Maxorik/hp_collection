@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import collection from "../service/figuresModel";
+import collection from "../service/figures/figuresModel";
 import { observer } from "mobx-react-lite";
-import { isMobile } from "../service/globals";
+import { isMobile } from "../service/config/globals";
 import { localize } from '../service/locale'
 import { Input } from "@velumweb/ui-kit";
 
