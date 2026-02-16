@@ -52,12 +52,11 @@ export function Card({ modal, showModal, selectedCard, onClickCheckBtn, onToggle
                                     <span className='checked-title'>{lang[locale].removeBtn}</span> :
                                     <span className='unchecked-title'>{lang[locale].addBtn}</span>}
                             </button>
-                            <button className='button favorite-btn-card'>
-                                <Heart
-                                    className={selectedCard.favorite === 'true' ? 'favorite-active' : ''}
-                                    onClick={() => onClickFavorite(selectedCard.id, selectedCard.favorite === 'false')}
-                                />
-                            </button>
+                            <div onClick={() => onClickFavorite(selectedCard.id, selectedCard.favorite === 'false')}>
+                                <button className='button favorite-btn-card'>
+                                    <Heart className={selectedCard.favorite === 'true' ? 'favorite-active' : ''}/>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

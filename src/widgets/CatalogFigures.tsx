@@ -27,7 +27,7 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
   //   collection.getCatalog();
   // }, []);
 
-  function checkItem(id, state) {
+  function checkItem(id: string, state: boolean) {
     collection.setCheck(id, state)
   }
 
@@ -68,12 +68,11 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                 >
                   <div className='flex-sb'>
                     <b>#{item.id}</b>
-                    <button className='favorite-btn'>
-                      <Heart
-                          className={item.favorite === 'true' ? 'favorite-active' : ''}
-                          onClick={() => onToggleFavorite(item.id, item.favorite === 'false')}
-                      />
-                    </button>
+                    <div onClick={() => onToggleFavorite(item.id, item.favorite === 'false')}>
+                      <button className='favorite-btn'>
+                        <Heart className={item.favorite === 'true' ? 'favorite-active' : ''} />
+                      </button>
+                    </div>
                   </div>
                   <div className='card-preview-image-container'>
                     <img alt={item.name} className='card-preview-image' src={`catalog_images/${[item.id]}.png`}/>
@@ -81,7 +80,7 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
                   <button
                       className={`button button-check ${item.checked === 'true' && 'button-secondary'}`}
                       id={item.id}
-                      onClick={() => checkItem(item.id, true)}>
+                      onClick={() => checkItem(item.id, item.checked !== 'true')}>
                     {item.checked !== 'true' ? lang[locale].addBtnMini : lang[locale].removeBtnShort}
                   </button>
                 </div>
