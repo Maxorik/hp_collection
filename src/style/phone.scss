@@ -15,6 +15,9 @@
   }
   .collection-btn {
     line-height: 26px;
+    &:hover {
+      background-color: rgb(255, 213, 2);
+    }
   }
   header {
     height: auto;
