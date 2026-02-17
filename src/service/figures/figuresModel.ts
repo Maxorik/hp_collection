@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import figures from './figuresStore'
+import { figures } from './figuresStore'
 
 export interface IFigures {
     name: string;
@@ -21,9 +21,7 @@ class Collection {
     getCatalog() {
         const localCollection = localStorage.getItem('hp_collection') ? JSON.parse(localStorage.getItem('hp_collection')) : [];
 
-        /** отображаем только новые наборы */
-        this.collectionList = figures.filter(item => item.id.match(/hp\d+/))
-            .sort((a, b) => a.id > b.id ? -1 : 1);
+        this.collectionList = this.sortByYearAndId(figures);
 
         /** запрашиваем отмеченные фигурки */
         this.collectionList = this.collectionList.map(item => {
@@ -35,6 +33,26 @@ class Collection {
             }
             return newItem;
         });
+    }
+
+    /** возвращает сортированный список по году + id */
+    private sortByYearAndId(arr: IFigures[]) {
+        return arr.sort((a, b) => {
+            const yearDiff = Number(b.year) - Number(a.year);
+            if (yearDiff !== 0) {
+                return yearDiff;
+            }
+
+            const getIdNumber = (id: string) => {
+                const match = id.match(/\d+/);
+                return match ? Number(match[0]) : 0;
+            };
+
+            const idA = getIdNumber(a.id);
+            const idB = getIdNumber(b.id);
+
+            return idB - idA;
+        })
     }
 
     /** количество отмеченных фигурок */

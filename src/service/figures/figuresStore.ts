@@ -1,6 +1,6 @@
 import { IFigures } from "./figuresModel";
 
-const figures: IFigures[] = [
+export const figures: IFigures[] = [
     {
         "name": "Rubeus Hagrid",
         "id": "hp613",
@@ -2122,11 +2122,6 @@ const figures: IFigures[] = [
     "year": "2018",
     "setCode": "75954-1"
 }, {
-    "name": "Susan Bones",
-    "id": "hp149a",
-    "year": "2018",
-    "setCode": "75954-1"
-}, {
     "name": "Harry Potter",
     "id": "hp150",
     "year": "2018",
@@ -2508,7 +2503,7 @@ const figures: IFigures[] = [
     "setCode": "4762-1"
 }, {
     "name": "Lord Voldemort",
-    "id": "hp069a",
+    "id": "hp069",
     "year": "2005",
     "setCode": "4766-1"
 }, {
@@ -2528,7 +2523,7 @@ const figures: IFigures[] = [
     "setCode": "4767-1 4768-2 5378-1"
 }, {
     "name": "Death Eater",
-    "id": "hp073a",
+    "id": "hp073",
     "year": "2005",
     "setCode": "4766-1"
 }, {
@@ -2635,12 +2630,7 @@ const figures: IFigures[] = [
     "name": "Harry Potter",
     "id": "hp056",
     "year": "2004",
-    "setCode": "4757-1"
-}, {
-    "name": "Harry Potter",
-    "id": "hp056a",
-    "year": "2004",
-    "setCode": "4753-1"
+    "setCode": "4757-1 4753-1"
 }, {
     "name": "Harry Potter",
     "id": "hp057",
@@ -2872,35 +2862,25 @@ const figures: IFigures[] = [
     "year": "2001",
     "setCode": "4709-1 4711-1 4733-1 4735-1 HPG03-1"
 }, {
-    "name": "Lord Voldemort",
-    "id": "hp069",
-    "year": "0",
-    "setCode": ""
-}, {
-    "name": "Death Eater",
-    "id": "hp073",
-    "year": "0",
-    "setCode": ""
-}, {
     "name": "Harry Potter",
     "id": "hp125",
-    "year": "0",
-    "setCode": ""
+    "year": "2011",
+    "setCode": "nonset"
 }, {
     "name": "Harry Potter",
     "id": "hp133",
-    "year": "0",
-    "setCode": ""
+    "year": "2012",
+    "setCode": "nonset"
 }, {
     "name": "Susan Bones",
     "id": "hp149",
-    "year": "0",
-    "setCode": ""
+    "year": "2018",
+    "setCode": "75954"
 }, {
     "name": "Cedric Diggory",
     "id": "hp179",
-    "year": "0",
-    "setCode": ""
+    "year": "2019",
+    "setCode": "nonset"
 }, {
     "name": "Percy Weasley",
     "id": "hp375",
@@ -3072,26 +3052,3 @@ const figures: IFigures[] = [
     "year": "2020",
     "setCode": "71028-17"
 } ]
-
-// возвращает сортированный список по году + id
-function sortByYearAndId(arr: IFigures[]) {
-    return arr.sort((a, b) => {
-    const yearDiff = Number(b.year) - Number(a.year);
-    if (yearDiff !== 0) {
-    return yearDiff;
-    }
-
-    const getIdNumber = (id: string) => {
-    const match = id.match(/\d+/);
-    return match ? Number(match[0]) : 0;
-    };
-
-    const idA = getIdNumber(a.id);
-    const idB = getIdNumber(b.id);
-
-    return idB - idA;
-    })
-}
-
-const sortedFigures = sortByYearAndId(figures)
-export default sortedFigures;
