@@ -10,7 +10,32 @@ export default defineConfig({
         VitePWA({
             registerType: 'autoUpdate',
             workbox: {
-                globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+                skipWaiting: true,
+                clientsClaim: true,
+                cleanupOutdatedCaches: true,
+
+                globPatterns: [
+                    '**/*.{js,css,html}',
+                    'images/**/*.{png,jpg,jpeg,webp,svg}'
+                ],
+
+                runtimeCaching: [
+                    {
+                        urlPattern: ({ request }) => request.destination === 'document',
+                        handler: 'NetworkFirst',
+                        options: {
+                            cacheName: 'html-cache'
+                        }
+                    }, {
+                        urlPattern: ({ request }) =>
+                            request.destination === 'script' ||
+                            request.destination === 'style',
+                        handler: 'StaleWhileRevalidate',
+                        options: {
+                            cacheName: 'assets-cache'
+                        }
+                    }
+                ]
             },
             devOptions: {
                 enabled: true
