@@ -39,12 +39,9 @@ header, footer {
   justify-content: end;
 }
 
-.footer-btn-container {
-  width: 1px;
-}
-
-footer, .footer-btn-container {
+footer {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
   bottom: 0;
   top: inherit;

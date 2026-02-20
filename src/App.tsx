@@ -6,11 +6,11 @@ import { Loader } from "./components/Loader";
 
 function App() {
     return (
-        <BrowserRouter>
-            <main className='body-bg'>
-                <PageRotes />
-            </main>
-        </BrowserRouter>
+            <BrowserRouter>
+                <main className='body-bg'>
+                    <PageRotes />
+                </main>
+            </BrowserRouter>
     );
 }
 

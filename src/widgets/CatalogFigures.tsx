@@ -7,8 +7,7 @@ import { Card } from "./Card";
 import '../style/other.scss'
 import Heart from '../../public/img/hearth.svg?react';
 
-export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
-                                          setView, setFilterItemName, viewType, setShowCleanBtn }) => {
+export const CatalogFigures = observer(({ showChecked, showModern, figureFilter, etView, viewType }) => {
   const [showCard, setShowCard] = useState(false);
   const [selectedCard, setSelectedCard] = useState();
 
@@ -18,14 +17,8 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
   }
 
   const onTableItemSelect = (itemName) => {
-    setFilterItemName(itemName);
     setView('grid');
-    setShowCleanBtn(true);
   }
-
-  // useEffect(() => {
-  //   collection.getCatalog();
-  // }, []);
 
   function checkItem(id: string, state: boolean) {
     collection.setCheck(id, state)

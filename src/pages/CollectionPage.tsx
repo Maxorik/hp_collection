@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Header, CatalogFigures } from '../widgets'
 
 export function CollectionPage() {
@@ -12,17 +12,7 @@ export function CollectionPage() {
         setFiguresFilter(value || '')
     }
 
-    /** Вид отображения строки \ карточки
-     * type: grid | row
-     * */
-    const setView = (type) => {
-        setViewType(type || 'grid');
-    }
-
-
     /** Временно недоступно ********************/
-    const [filterItemName, setFilterItemName] = useState('');
-    const [showCleanBtn, setShowCleanBtn] = useState(false);
     /** Чекбокс "показывать имеющиеся в коллекции" */
     const setVisibleCheckedItems = (state) => {
         setShowChecked(state);
@@ -30,6 +20,12 @@ export function CollectionPage() {
     /** Чекбокс для наборов "новой волны" после 2017 года */
     const setVisibleModernItems = (state) => {
         setShowModern(state);
+    }
+    /** Вид отображения строки \ карточки
+     * type: grid | row
+     * */
+    const setView = (type) => {
+        setViewType(type || 'grid');
     }
 
     return (
@@ -41,11 +37,9 @@ export function CollectionPage() {
             <CatalogFigures
                 showChecked = { showChecked }
                 showModern = { showModern }
-                setFilterItemName = { setFilterItemName }
                 figureFilter = { figureFilter }
                 viewType = { viewType }
                 setView = { setView }
-                setShowCleanBtn = { setShowCleanBtn }
             />
         </>
     );
