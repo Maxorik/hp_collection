@@ -3051,4 +3051,165 @@ export const figures: IFigures[] = [
     "id": "colhp39",
     "year": "2020",
     "setCode": "71028-17"
-} ]
+}, {
+        "name": "Mannequin",
+        "id": "hp578",
+        "year": "2025",
+        "setCode": "76452"
+    }, {
+        "name": "Shop Staff",
+        "id": "hp586",
+        "year": "2025",
+        "setCode": "76457"
+    }, {
+        "name": "Shop Owner",
+        "id": "hp573",
+        "year": "2025",
+        "setCode": "76452"
+    }, {
+        "name": "Sleeping Witch",
+        "id": "hp547",
+        "year": "2025",
+        "setCode": "76446"
+    }, {
+        "name": "Draco Malfoy",
+        "id": "hp548",
+        "year": "2025",
+        "setCode": "nonset"
+    }, {
+        "name": "Statue",
+        "id": "hp539",
+        "year": "2025",
+        "setCode": "30706, 76447"
+    }, {
+        "name": "Harry Potter",
+        "id": "hp518",
+        "year": "2024",
+        "setCode": "nonset"
+    }, {
+        "name": "Wizard",
+        "id": "hp503",
+        "year": "2024",
+        "setCode": "76439"
+    }, {
+        "name": "Cho Chang",
+        "id": "hp537",
+        "year": "2025",
+        "setCode": "nonset"
+    }, {
+        "name": "Barty Crouch Sr.",
+        "id": "hp494",
+        "year": "2024",
+        "setCode": "76440"
+    }, {
+        "name": "Witch",
+        "id": "hp502",
+        "year": "2024",
+        "setCode": "76439"
+    }, {
+        "name": "Mountain Troll",
+        "id": "hp489",
+        "year": "2024",
+        "setCode": "76435"
+    }, {
+        "name": "Bellatrix Lestrange",
+        "id": "hp483",
+        "year": "2024",
+        "setCode": "76435"
+    }, {
+        "name": "Lord Voldemort",
+        "id": "hp456",
+        "year": "2023",
+        "setCode": "nonset"
+    }, {
+        "name": "Lord Voldemort",
+        "id": "hp456",
+        "year": "2023",
+        "setCode": "nonset"
+    }, {
+        "name": "Remus Lupin",
+        "id": "hp479",
+        "year": "2024",
+        "setCode": "nonset"
+    }, {
+        "name": "Luna Lovegood",
+        "id": "hp465",
+        "year": "2023",
+        "setCode": "nonset"
+    }, {
+        "name": "Hermione Granger",
+        "id": "hp394",
+        "year": "2022",
+        "setCode": "nonset"
+    }, {
+        "name": "Ron Weasley",
+        "id": "hp444",
+        "year": "2023",
+        "setCode": "nonset"
+    }, {
+        "name": "Ron Weasley",
+        "id": "hp395",
+        "year": "2022",
+        "setCode": "nonset"
+    }, {
+        "name": "Statue",
+        "id": "hp363",
+        "year": "2022",
+        "setCode": "76403"
+    }, {
+        "name": "Wizard",
+        "id": "hp301",
+        "year": "2021",
+        "setCode": "40500"
+    }, {
+        "name": "Wizard",
+        "id": "hp302",
+        "year": "2021",
+        "setCode": "40500"
+    }, {
+        "name": "Statue",
+        "id": "hp298",
+        "year": "2021",
+        "setCode": "76395"
+    }, {
+        "name": "Mr. Borgin",
+        "id": "hp297",
+        "year": "2021",
+        "setCode": "40500"
+    }, {
+        "name": "Mannequin",
+        "id": "hp258",
+        "year": "2020",
+        "setCode": "75978"
+    }, {
+        "name": "Mannequin",
+        "id": "hp257",
+        "year": "2020",
+        "setCode": "75978"
+    }, {
+        "name": "Cedric Diggory",
+        "id": "hp275",
+        "year": "2021",
+        "setCode": "nonset"
+    }, {
+        "name": "Mechanical",
+        "id": "hp241",
+        "year": "2020",
+        "setCode": "75966"
+    }, {
+        "name": "Statue",
+        "id": "hp199",
+        "year": "2019",
+        "setCode": "75965"
+    }, {
+        "name": "George Weasley",
+        "id": "hp122",
+        "year": "2011",
+        "setCode": "10217"
+    }, {
+        "name": "Dolores Umbridge",
+        "id": "hp080",
+        "year": "2007",
+        "setCode": "5378"
+    }, 
+]
