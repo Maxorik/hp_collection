@@ -3122,11 +3122,6 @@ export const figures: IFigures[] = [
         "year": "2023",
         "setCode": "nonset"
     }, {
-        "name": "Lord Voldemort",
-        "id": "hp456",
-        "year": "2023",
-        "setCode": "nonset"
-    }, {
         "name": "Remus Lupin",
         "id": "hp479",
         "year": "2024",
