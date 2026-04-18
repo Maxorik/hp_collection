@@ -3206,5 +3206,30 @@ export const figures: IFigures[] = [
         "id": "hp080",
         "year": "2007",
         "setCode": "5378"
-    }, 
+    }, {
+        "name": "Hermione Granger",
+        "id": "dim046",
+        "year": "2017",
+        "setCode": "nonset"
+    }, {
+        "name": "Harry Potter",
+        "id": "dim036",
+        "year": "2016",
+        "setCode": "nonset"
+    }, {
+        "name": "Lord Voldemort",
+        "id": "dim037",
+        "year": "2016",
+        "setCode": "nonset"
+    }, {
+        "name": "Newt Scamander",
+        "id": "dim034",
+        "year": "2016",
+        "setCode": "nonset"
+    }, {
+        "name": "Tina Goldstein",
+        "id": "dim029",
+        "year": "2016",
+        "setCode": "nonset"
+    },
 ]
