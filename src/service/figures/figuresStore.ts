@@ -3231,5 +3231,30 @@ export const figures: IFigures[] = [
         "id": "dim029",
         "year": "2016",
         "setCode": "nonset"
+    }, {
+        "name": "Mountain Troll",
+        "id": "41983",
+        "year": "2002",
+        "setCode": "4712"
+    }, {
+        "name": "Skeleton",
+        "id": "gen013",
+        "year": "2005",
+        "setCode": "4766"
+    }, {
+        "name": "Skeleton",
+        "id": "gen014",
+        "year": "2005",
+        "setCode": "4766"
+    }, {
+        "name": "Skeleton",
+        "id": "gen174",
+        "year": "2005",
+        "setCode": "4766"
+    }, {
+        "name": "Skeleton",
+        "id": "gen176",
+        "year": "2005",
+        "setCode": "4766"
     },
 ]
