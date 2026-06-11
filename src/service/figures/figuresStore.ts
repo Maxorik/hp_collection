@@ -3256,5 +3256,35 @@ export const figures: IFigures[] = [
         "id": "gen176",
         "year": "2005",
         "setCode": "4766"
-    },
+    }, {
+    "name": "Lee Jordan",
+    "id": "hp619",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Draco Malfoy",
+    "id": "hp622",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Gilderoy Lockhart",
+    "id": "hp625",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Millicent Bulstrode",
+    "id": "hp626",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Ginny Weasley",
+    "id": "hp627",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Statue",
+    "id": "hp629",
+    "year": "2026",
+    "setCode": "76473-1"
+},
 ]
