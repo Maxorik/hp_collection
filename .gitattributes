@@ -1,0 +1,4 @@
+# в release попадет только docs
+docs/ export-ignore
+* export-ignore
+!/docs/
