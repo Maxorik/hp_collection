@@ -3286,5 +3286,80 @@ export const figures: IFigures[] = [
     "id": "hp629",
     "year": "2026",
     "setCode": "76473-1"
+}, {
+    "name": "Hermione Granger",
+    "id": "hp617",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Moaning Myrtle",
+    "id": "hp618",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Tom Riddle",
+    "id": "hp620",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Argus Filch",
+    "id": "hp621",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "The Bloody Baron",
+    "id": "hp623",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Harry Potter",
+    "id": "hp624",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Ron Weasley",
+    "id": "hp628",
+    "year": "2026",
+    "setCode": "76473-1"
+}, {
+    "name": "Harry Potter",
+    "id": "hp631",
+    "year": "2026",
+    "setCode": "76471-1"
+}, {
+    "name": "Hermione Granger",
+    "id": "hp632",
+    "year": "2026",
+    "setCode": "76471-1"
+}, {
+    "name": "Madam Potage",
+    "id": "hp633",
+    "year": "2026",
+    "setCode": "76471-1"
+}, {
+    "name": "Narcissa Malfoy",
+    "id": "hp635",
+    "year": "2026",
+    "setCode": "76471-1"
+}, {
+    "name": "Fenrir Greyback",
+    "id": "hp636",
+    "year": "2026",
+    "setCode": "76471-1"
+}, {
+    "name": "Mr. Borgin",
+    "id": "hp634",
+    "year": "2026",
+    "setCode": "76471-1"
+}, {
+    "name": "Sirius Black",
+    "id": "hp630",
+    "year": "2026",
+    "setCode": "76475-1"
+}, {
+    "name": "Albus Dumbledore",
+    "id": "hp637",
+    "year": "2026",
+    "setCode": "76478-1"
 },
 ]

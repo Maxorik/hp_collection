@@ -6,33 +6,51 @@ import { Loader } from "./components/Loader";
 
 function App() {
     return (
-            <BrowserRouter>
+            // <BrowserRouter>
                 <main className='body-bg'>
                     <PageRotes />
                 </main>
-            </BrowserRouter>
+            // </BrowserRouter>
     );
 }
 
+
 function PageRotes() {
     const pageRef = useRef('');
-    const navigate = useNavigate();
 
     useEffect(() => {
         if (pageRef.current === '') {
             collection.getCatalog();
-            // pageRef.current = collection.getCurrentCount() ? 'collection' : 'start';
             pageRef.current = 'collection'
-            navigate(pageRef.current, { replace: false })
         }
     }, []);
 
     return (
-        <Routes>
-            <Route path="*" element={ <Loader /> } />
-            <Route path="collection" element={ <CollectionPage /> } />
-        </Routes>
+        <CollectionPage />
     )
 }
+
+
+/** версия с навигацией - добавить, когда будет несколько страниц */
+// function PageRotesWithNav() {
+//     const pageRef = useRef('');
+//     const navigate = useNavigate();
+
+//     useEffect(() => {
+//         if (pageRef.current === '') {
+//             collection.getCatalog();
+//             // pageRef.current = collection.getCurrentCount() ? 'collection' : 'start';
+//             pageRef.current = 'collection'
+//             navigate(pageRef.current, { replace: false })
+//         }
+//     }, []);
+
+//     return (
+//         <Routes>
+//             <Route path="*" element={ <Loader /> } />
+//             <Route path="collection" element={ <CollectionPage /> } />
+//         </Routes>
+//     )
+// }
 
 export default App;
