@@ -71,6 +71,7 @@
   }
   .collection-header {
     width: 100%;
+    justify-content: space-between;
   }
   .header-search {
     margin-right: 8px;
@@ -101,6 +102,10 @@
   }
   .card-modal-image {
     margin: 64px auto 0;
+  }
+  .main-search {
+    width: 200px;
+    margin: auto;
   }
 }
 

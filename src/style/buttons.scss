@@ -181,3 +181,23 @@
   fill: red;
   stroke: black;
 }
+
+.btn-icon {
+  fill: #2e2828cf;
+  stroke: #2e2828cf;
+  transition: transform 0.1s ease;
+  width: 36px;
+  padding: 6px 4px 4px 5px;
+
+  &:active {
+    transform: translateY(0.5px);
+    box-shadow: none;
+  }
+
+  &:hover {
+    stroke: #000;
+    p {
+      color: #000;
+    }
+  }
+}

@@ -4,6 +4,8 @@ import { observer } from "mobx-react-lite";
 import { isMobile } from "../service/config/globals";
 import { localize } from '../service/locale'
 import { Input } from "@velumweb/ui-kit";
+import Login from '../../public/img/login.svg?react';
+import Logout from '../../public/img/logout.svg?react';
 
 export const Header = observer(({ showModern, setFigureFilter }) => {
     const [search, setSearch] = useState();
@@ -27,9 +29,17 @@ export const Header = observer(({ showModern, setFigureFilter }) => {
                         isSearch={true}
                         value={search}
                         onChange={searchHandler}
-                        cls='w200'
+                        cls='main-search'
                     />
                 </div>
+                {!isMobile && <div className='header-controllers'>
+                    <button className='button btn-icon'>
+                        <>
+                            <Login />
+                            <p className='button-bottom-title'>{localize('login')}</p>    
+                        </>
+                    </button>
+                </div>}
             </div>
         </header>
     );

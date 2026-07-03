@@ -38,6 +38,8 @@ const lang = {
         ravenclaw: 'Когтевран',
         slytherin: 'Слизерин',
         last_added: 'Последние добавленные',
+        login: 'Войти',
+        logout: 'Выйти'
     },
     en: {
         filterName: 'Search by name',
@@ -76,6 +78,8 @@ const lang = {
         ravenclaw: 'Ravenclaw',
         slytherin: 'Slytherin',
         last_added: 'Latest additions',
+        login: 'Log in',
+        logout: 'Log out'
     }
 }
 
