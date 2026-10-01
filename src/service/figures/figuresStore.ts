@@ -3361,5 +3361,80 @@ export const figures: IFigures[] = [
     "id": "hp637",
     "year": "2026",
     "setCode": "76478-1"
+}, {
+    "name": "Lucius Malfoy",
+    "id": "hp638",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Sirius Black",
+    "id": "hp639",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Antonin Dolohov",
+    "id": "hp640",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Hermione Granger",
+    "id": "hp641",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Alastor 'Mad-Eye' Moody",
+    "id": "hp642",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Albus Dumbledore",
+    "id": "hp643",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Ron Weasley",
+    "id": "hp644",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Arthur Weasley",
+    "id": "hp645",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Statue - The Ministry of Magic",
+    "id": "hp646",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Harry Potter",
+    "id": "hp647",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Professor Dolores Umbridge",
+    "id": "hp648",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Lord Voldemort",
+    "id": "hp649",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Kingsley Shacklebolt",
+    "id": "hp650",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Arabella Figg",
+    "id": "hp651",
+    "year": "2026",
+    "setCode": "76476-1"
+}, {
+    "name": "Nymphadora Tonks",
+    "id": "hp652",
+    "year": "2026",
+    "setCode": "76476-1"
 },
 ]

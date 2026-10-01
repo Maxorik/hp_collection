@@ -16,7 +16,7 @@ export default defineConfig({
 
                 globPatterns: [
                     '**/*.{js,css,html}',
-                    'images/**/*.{png,jpg,jpeg,webp,svg}'
+                    '**/*.{png,jpg,jpeg,webp,svg}',
                 ],
 
                 runtimeCaching: [

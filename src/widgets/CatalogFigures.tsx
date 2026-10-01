@@ -47,7 +47,7 @@ export const CatalogFigures = observer(({ showChecked, showModern, figureFilter,
 
   return (
       <div className='collection-body'>
-        <div className='preload-image'><img alt='' src="../../public/img/card_back.png"/></div>
+        <div className='preload-image'><img alt='' src="../../img/card_back.png"/></div>
         {viewType === 'grid' ?
             <div className="card-grid">
               {collection.collectionList.map((item) => {
