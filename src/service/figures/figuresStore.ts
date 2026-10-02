@@ -1482,6 +1482,11 @@ export const figures: IFigures[] = [
     "year": "2021",
     "setCode": "76388-1"
 }, {
+    "name": "Mr. Flume",
+    "id": "hp291",
+    "year": "2021",
+    "setCode": "76388-1"
+}, {
     "name": "Mrs. Flume",
     "id": "hp292",
     "year": "2021",
@@ -3286,6 +3291,16 @@ export const figures: IFigures[] = [
     "id": "hp629",
     "year": "2026",
     "setCode": "76473-1"
+}, {
+    "name": "Ginny Weasley",
+    "id": "hp615",
+    "year": "2026",
+    "setCode": "???"
+}, {
+    "name": "Draco Malfoy",
+    "id": "hp616",
+    "year": "2026",
+    "setCode": "b26hp01uk"
 }, {
     "name": "Hermione Granger",
     "id": "hp617",
