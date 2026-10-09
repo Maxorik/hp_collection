@@ -3451,5 +3451,20 @@ export const figures: IFigures[] = [
     "id": "hp652",
     "year": "2026",
     "setCode": "76476-1"
+}, {
+    "name": "Cornelius Fudge",
+    "id": "hp800",
+    "year": "2026",
+    "setCode": "40901-1"
+}, {
+    "name": "Fountain Statue",
+    "id": "hp801",
+    "year": "2026",
+    "setCode": "40901-1"
+}, {
+    "name": "Daily Prophet Vendor",
+    "id": "hp802",
+    "year": "2026",
+    "setCode": "40901-1"
 },
 ]
