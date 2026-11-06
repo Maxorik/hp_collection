@@ -3453,17 +3453,17 @@ export const figures: IFigures[] = [
     "setCode": "76476-1"
 }, {
     "name": "Cornelius Fudge",
-    "id": "hp800",
+    "id": "hp654",
     "year": "2026",
     "setCode": "40901-1"
 }, {
     "name": "Fountain Statue",
-    "id": "hp801",
+    "id": "hp655",
     "year": "2026",
     "setCode": "40901-1"
 }, {
     "name": "Daily Prophet Vendor",
-    "id": "hp802",
+    "id": "hp653",
     "year": "2026",
     "setCode": "40901-1"
 },
